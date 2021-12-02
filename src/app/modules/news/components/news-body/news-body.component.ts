@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-news-body',
   templateUrl: './news-body.component.html',
-  styleUrls: ['./news-body.component.scss']
+  styleUrls: ['./news-body.component.scss'],
 })
 export class NewsBodyComponent implements OnInit {
+  @Input() articleSource: string = '';
+  @Input() articleBody: string = '';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -11,7 +11,10 @@
   ></app-news-data>
 
   <!-- News body -->
-  <app-news-body></app-news-body>
+  <app-news-body
+    [articleSource]="article.source"
+    [articleBody]="article.body"
+  ></app-news-body>
 </div>
 
 <ng-template #noArticle>

@@ -5,6 +5,7 @@ export interface Article {
 export interface ArticleElement {
   abstract: string;
   authors_names: string[];
+  body: string;
   category: string;
   date: string;
   image_url: string;
