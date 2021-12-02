@@ -7,11 +7,17 @@ module.exports = {
   theme: {
     fontFamily: {
       serif: ["Playfair Display", "serif"],
+      sansSerif: ["Bitter", "serif"],
     },
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      flexDirection: ["responsive", "first"],
+      gridColumnStart: ["responsive", "first"],
+      gridColumnEnd: ["responsive", "first"],
+      height: ["responsive", "first"],
+    },
   },
   plugins: [],
 };
