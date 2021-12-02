@@ -1,23 +1,24 @@
 <div class="md:flex md:flex-col-reverse">
   <!-- News image -->
-  <div
-    class="bg-gray-800 w-full h-60 my-4 bg-cover bg-center | md:h-96"
-    style="
-      background-image: url('../../../../../assets/img/news-placeholder.webp');
-    "
-  ></div>
+  <img class="w-full my-4" [src]="articleImage | imgNews" />
 
   <!-- News title and data -->
   <div class="flex flex-col">
     <!-- News title -->
     <h1 class="text-2xl font-serif mb-3 | md:text-5xl">
-      Titular de la noticia: Spider-Verse confirmado siempre tuve fe
+      {{ articleTitle }}
     </h1>
 
     <!-- News data -->
     <div class="flex justify-between mb-3 | md:flex-col">
-      <span class="text-xs text-gray-400 font-serif | md:mb-2">Martín Rodríguez</span>
-      <span class="text-xs text-gray-400 font-serif">30 feb. 2021</span>
+      <span
+        class="text-xs text-gray-400 font-serif | md:mb-2"
+        *ngFor="let author of articleAuthors"
+        >{{ author }}</span
+      >
+      <span class="text-xs text-gray-400 font-serif">{{
+        articleDate | date
+      }}</span>
     </div>
   </div>
 </div>

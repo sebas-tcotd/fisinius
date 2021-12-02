@@ -1,6 +1,36 @@
-<div class="container mx-auto px-4 | md:px-12 | lg:px-60 | xl:px-96">
-  <app-news-data></app-news-data>
+<div
+  class="container mx-auto px-4 | md:px-12 | lg:px-60 | xl:px-96"
+  *ngIf="article; else noArticle"
+>
+  <!-- News data like title, authors, image, etc. -->
+  <app-news-data
+    [articleTitle]="article.title"
+    [articleAuthors]="article.authors_names"
+    [articleImage]="article.image_url"
+    [articleDate]="article.date"
+  ></app-news-data>
 
   <!-- News body -->
   <app-news-body></app-news-body>
 </div>
+
+<ng-template #noArticle>
+  <h2
+    class="
+      container
+      mx-auto
+      px-4
+      |
+      md:px-12
+      |
+      lg:px-60
+      |
+      xl:px-96
+      |
+      font-serif
+      text-xl
+    "
+  >
+    Cargando
+  </h2>
+</ng-template>

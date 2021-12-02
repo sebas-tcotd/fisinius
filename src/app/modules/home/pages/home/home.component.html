@@ -3,9 +3,18 @@
     <h1 class="font-bold text-2xl px-6 | lg:px-0">Últimas noticias</h1>
 
     <div class="md:container px-6 | lg:px-0 lg:grid lg:grid-cols-3 lg:gap-6 |">
-      <app-headline
-        *ngFor="let item of [1, 2, 3, 4]"
-      ></app-headline>
+      <ng-container *ngIf="news.news.length > 0; else noNews">
+        <app-headline
+          class="cursor-pointer hover:shadow-xl"
+          [routerLink]="['/news', headline.news_id]"
+          *ngFor="let headline of news.news"
+          [headline]="headline"
+        ></app-headline>
+      </ng-container>
+
+      <ng-template #noNews>
+        <p class="font-sansSerif my-8">No hay noticias</p>
+      </ng-template>
     </div>
   </main>
 </div>

@@ -1,20 +1,21 @@
-<div class="flex justify-between my-8 | lg:flex-col-reverse">
+<div class="flex justify-between my-8 items-center | lg:flex-col-reverse lg:items-start">
   <!-- News data -->
   <div class="flex flex-col w-3/4 mr-4 | lg:mr-0 lg:mt-4">
-    <span class="uppercase text-gray-700 text-xs tracking-widest"
-      >Política</span
-    >
+    <span class="uppercase text-gray-700 text-xs tracking-widest">
+      {{ headline.category }}
+    </span>
     <h3 class="text-lg">
-      Titular de la noticia un poco larga para que llegue a las tres líneas
+      {{ headline.title }}
     </h3>
-    <p class="text-gray-500 text-xs">Abstract</p>
+    <p class="text-gray-500 text-xs">
+      {{ headline.abstract | slice: 0:100 }}...
+    </p>
   </div>
 
   <!-- News image -->
-  <div
-    class="bg-gray-800 w-1/4 bg-cover bg-center | lg:h-40 lg:w-full"
-    style="
-      background-image: url('../../../../../assets/img/news-placeholder.webp');
-    "
-  ></div>
+  <img
+    [src]="headline.image_url | imgNews"
+    [alt]="headline.title"
+    class="w-1/4 h-full | lg:w-full lg:h-auto lg:overflow-auto"
+  />
 </div>
