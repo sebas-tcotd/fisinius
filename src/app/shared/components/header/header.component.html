@@ -75,7 +75,7 @@
     >
   </nav>
 
-  <a
+  <button
     class="
       flex-none flex
       items-center
@@ -91,8 +91,23 @@
     "
   >
     <span class="material-icons">search</span>
-  </a>
-  <button class="flex-none | w-16 h-16 | hidden md:block | focus:bg-gray-200">
+  </button>
+  <button
+    class="
+      flex-none
+      |
+      w-16
+      h-16
+      |
+      hidden
+      md:block
+      |
+      active:bg-gray-200
+      |
+      transition
+      duration-200
+    "
+  >
     <span class="material-icons">settings_accessibility</span>
   </button>
 </header>

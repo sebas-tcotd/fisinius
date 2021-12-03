@@ -10,13 +10,7 @@ import { News, NewsElement } from 'src/app/core/interfaces/news.interfaces';
 export class HeadlineComponent implements OnInit {
   @Input('headline') headline!: NewsElement;
 
-  image!: SafeStyle;
+  constructor() {}
 
-  constructor(private sanitizer: DomSanitizer) {}
-
-  ngOnInit(): void {
-    this.image = this.sanitizer.bypassSecurityTrustStyle(
-      `url(${this.headline.image_url})`
-    );
-  }
+  ngOnInit(): void {}
 }
