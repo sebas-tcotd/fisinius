@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'shared-header',
@@ -6,9 +6,15 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  prevScrollPosition: number = NaN;
+  @Input() isSidebarOpen: boolean = false;
+  @Output() openSignEmitter: EventEmitter<boolean> = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggleSidebar() {
+    this.isSidebarOpen = true;
+    this.openSignEmitter.emit(this.isSidebarOpen);
+  }
 }

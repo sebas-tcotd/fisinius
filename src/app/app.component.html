@@ -1,4 +1,12 @@
-<shared-header></shared-header>
+<shared-header
+  (openSignEmitter)="receiveToggleStatus($event)"
+  [isSidebarOpen]="isSidebarOpen"
+></shared-header>
+
+<shared-sidebar
+  (closeSignEmitter)="receiveToggleStatus($event)"
+  [isSidebarOpen]="isSidebarOpen"
+></shared-sidebar>
 
 <router-outlet></router-outlet>
 

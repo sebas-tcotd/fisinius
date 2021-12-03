@@ -5,6 +5,7 @@ import { ImgNewsPipe } from './pipes/img-news.pipe';
 import { RouterModule } from '@angular/router';
 import { HeadlineComponent } from './components/headline/headline.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -12,8 +13,15 @@ import { FooterComponent } from './components/footer/footer.component';
     ImgNewsPipe,
     HeadlineComponent,
     FooterComponent,
+    SidebarComponent,
   ],
   imports: [CommonModule, RouterModule],
-  exports: [HeaderComponent, ImgNewsPipe, HeadlineComponent, FooterComponent],
+  exports: [
+    HeaderComponent,
+    ImgNewsPipe,
+    HeadlineComponent,
+    FooterComponent,
+    SidebarComponent,
+  ],
 })
 export class SharedModule {}

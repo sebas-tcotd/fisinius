@@ -13,7 +13,11 @@
   "
   #cabecera
 >
-  <button class="flex-none | w-16 h-16 | md:hidden">
+  <button
+    #mobileMenu
+    class="flex-none | w-16 h-16 | md:hidden | focus:bg-gray-200"
+    (click)="toggleSidebar()"
+  >
     <span class="material-icons">menu</span>
   </button>
 
@@ -57,10 +61,10 @@
     >
   </nav>
 
-  <button class="flex-none | w-16 h-16">
+  <button class="flex-none | w-16 h-16 | focus:bg-gray-200">
     <span class="material-icons">search</span>
   </button>
-  <button class="flex-none | w-16 h-16 | hidden md:block">
+  <button class="flex-none | w-16 h-16 | hidden md:block | focus:bg-gray-200">
     <span class="material-icons">settings_accessibility</span>
   </button>
 </header>

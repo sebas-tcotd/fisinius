@@ -1,0 +1,136 @@
+<!-- Cuando se haga toggle, activar esta clase: translate-x-0 -->
+<!-- Mientras se esté en desarrollo, borrar esta clase: -translate-x-full -->
+<div
+  class="
+    md:hidden
+    |
+    backdrop-filter backdrop-blur-md
+    bg-gray-200 bg-opacity-75
+    |
+    w-64
+    space-y-6
+    py-7
+    px-2
+    |
+    inset-y-0
+    left-0
+    |
+    shadow-lg
+    fixed
+    |
+    transform
+    md:relative
+    transition
+    duration-200
+    ease-in-out
+  "
+  [class.-translate-x-full]="!isSidebarOpen"
+>
+  <!-- logo -->
+  <div class="flex items-center justify-between px-4">
+    <a routerLink="/home">
+      <span class="text-2xl font-serif">Fisiniús</span>
+    </a>
+
+    <button class="flex items-center" (click)="closeSidebar()">
+      <span class="material-icons"> close </span>
+    </button>
+  </div>
+
+  <!-- nav -->
+  <nav>
+    <a
+      routerLink="/home"
+      routerLinkActive="border-l-4 border-black"
+      class="
+        block
+        py-2.5
+        px-4
+        font-serif
+        transition
+        duration-200
+        hover:bg-black hover:text-white
+      "
+      (mouseup)="closeSidebar()"
+    >
+      Inicio
+    </a>
+
+    <hr class="h-0.5 my-3 bg-black bg-opacity-25" />
+
+    <a
+      routerLink="/section/politica"
+      routerLinkActive="border-l-4 border-black"
+      class="
+        block
+        py-2.5
+        px-4
+        font-serif
+        transition
+        duration-200
+        hover:bg-black hover:text-white
+      "
+      (mouseup)="closeSidebar()"
+    >
+      Política
+    </a>
+    <a
+      routerLink="/section/salud"
+      routerLinkActive="border-l-4 border-black"
+      class="
+        block
+        py-2.5
+        px-4
+        font-serif
+        transition
+        duration-200
+        hover:bg-black hover:text-white
+      "
+      (mouseup)="closeSidebar()"
+    >
+      Salud
+    </a>
+    <a
+      routerLink="/section/deporte"
+      routerLinkActive="border-l-4 border-black"
+      class="
+        block
+        py-2.5
+        px-4
+        font-serif
+        transition
+        duration-200
+        hover:bg-black hover:text-white
+      "
+      (mouseup)="closeSidebar()"
+    >
+      Deportes
+    </a>
+    <a
+      routerLink="/section/ciencia"
+      routerLinkActive="border-l-4 border-black"
+      class="
+        block
+        py-2.5
+        px-4
+        font-serif
+        transition
+        duration-200
+        hover:bg-black hover:text-white
+      "
+      (mouseup)="closeSidebar()"
+    >
+      Ciencias
+    </a>
+    <hr class="h-0.5 my-3 bg-black bg-opacity-25" />
+    <button
+      class="flex items-center w-full hover:bg-black hover:text-white"
+      (mouseup)="closeSidebar()"
+    >
+      <span class="material-icons pl-4">settings_accessibility</span>
+      <a class="py-2.5 px-4 font-serif transition duration-200"
+        >Accesibilidad</a
+      >
+    </button>
+  </nav>
+</div>
