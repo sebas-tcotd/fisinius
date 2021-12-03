@@ -15,7 +15,7 @@ export class CienciaComponent implements OnInit {
   constructor(private newsService: NewsService) {}
 
   ngOnInit(): void {
-    const quantity = 10;
+    const quantity = 12;
     const from = Math.floor(Math.random() * (100 - quantity));
 
     this.newsService
