@@ -13,6 +13,7 @@ module.exports = {
   },
   variants: {
     extend: {
+      backgroundColor: ["responsive", "active"],
       flexDirection: ["responsive", "first"],
       gridColumnStart: ["responsive", "first"],
       gridColumnEnd: ["responsive", "first"],

@@ -2,3 +2,7 @@
 @use "tailwindcss/base";
 @use "tailwindcss/components";
 @use "tailwindcss/utilities";
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}

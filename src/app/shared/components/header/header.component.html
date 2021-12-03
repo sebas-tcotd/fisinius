@@ -13,13 +13,27 @@
   "
   #cabecera
 >
-  <button
+  <a
     #mobileMenu
-    class="flex-none | w-16 h-16 | md:hidden | focus:bg-gray-200"
+    class="
+      flex-none flex
+      items-center
+      justify-center
+      |
+      w-16
+      h-16
+      |
+      md:hidden
+      |
+      active:bg-gray-200
+      |
+      transition
+      duration-200
+    "
     (click)="toggleSidebar()"
   >
     <span class="material-icons">menu</span>
-  </button>
+  </a>
 
   <a
     class="flex-grow text-center font-serif | md:text-left md:text-3xl"
@@ -61,9 +75,23 @@
     >
   </nav>
 
-  <button class="flex-none | w-16 h-16 | focus:bg-gray-200">
+  <a
+    class="
+      flex-none flex
+      items-center
+      justify-center
+      |
+      w-16
+      h-16
+      |
+      active:bg-gray-200
+      |
+      transition
+      duration-200
+    "
+  >
     <span class="material-icons">search</span>
-  </button>
+  </a>
   <button class="flex-none | w-16 h-16 | hidden md:block | focus:bg-gray-200">
     <span class="material-icons">settings_accessibility</span>
   </button>
