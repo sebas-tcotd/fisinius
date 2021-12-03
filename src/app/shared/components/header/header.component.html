@@ -1,1 +1,66 @@
-<p>header works!</p>
+<header
+  class="
+    lg:container
+    mx-auto
+    mb-6
+    transition-all
+    example-toolbar
+    |
+    flex
+    items-center
+    |
+    md:pl-6
+  "
+  #cabecera
+>
+  <button class="flex-none | w-16 h-16 | md:hidden">
+    <span class="material-icons">menu</span>
+  </button>
+
+  <a
+    class="flex-grow text-center font-serif | md:text-left md:text-3xl"
+    [routerLink]="['/home']"
+    routerLinkActive="router-link-active"
+    >Fisiniús</a
+  >
+
+  <nav class="hidden font-serif | md:flex md:justify-around">
+    <a
+      class="mx-4 cursor-pointer hover:font-bold"
+      [routerLink]="['/home']"
+      routerLinkActive="border-b-2 border-black"
+      >Inicio</a
+    >
+    <a
+      class="mx-4 cursor-pointer hover:font-bold"
+      routerLink="/section/politica"
+      routerLinkActive="border-b-2 border-black"
+      >Política</a
+    >
+    <a
+      class="mx-4 cursor-pointer hover:font-bold"
+      routerLink="/section/salud"
+      routerLinkActive="border-b-2 border-black"
+      >Salud</a
+    >
+    <a
+      class="mx-4 cursor-pointer hover:font-bold"
+      routerLink="/section/deporte"
+      routerLinkActive="border-b-2 border-black"
+      >Deportes</a
+    >
+    <a
+      class="mx-4 cursor-pointer hover:font-bold"
+      routerLink="/section/ciencia"
+      routerLinkActive="border-b-2 border-black"
+      >Ciencias</a
+    >
+  </nav>
+
+  <button class="flex-none | w-16 h-16">
+    <span class="material-icons">search</span>
+  </button>
+  <button class="flex-none | w-16 h-16 | hidden md:block">
+    <span class="material-icons">settings_accessibility</span>
+  </button>
+</header>

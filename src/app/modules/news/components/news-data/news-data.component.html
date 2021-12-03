@@ -1,0 +1,24 @@
+<div class="md:flex md:flex-col-reverse">
+  <!-- News image -->
+  <img class="w-full my-4" [src]="articleImage | imgNews" />
+
+  <!-- News title and data -->
+  <div class="flex flex-col">
+    <!-- News title -->
+    <h1 class="text-2xl font-serif mb-3 | md:text-5xl">
+      {{ articleTitle }}
+    </h1>
+
+    <!-- News data -->
+    <div class="flex justify-between mb-3 | md:flex-col">
+      <span
+        class="text-xs text-gray-400 font-serif | md:mb-2"
+        *ngFor="let author of articleAuthors"
+        >{{ author }}</span
+      >
+      <span class="text-xs text-gray-400 font-serif">{{
+        articleDate | date
+      }}</span>
+    </div>
+  </div>
+</div>

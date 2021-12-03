@@ -1,0 +1,23 @@
+<div
+  class="
+    md:container
+    px-6
+    |
+    lg:px-0 lg:grid lg:grid-cols-3 lg:gap-6
+    |
+    font-serif
+  "
+>
+  <ng-container *ngIf="news.news.length > 0; else noNews">
+    <app-headline
+      class="cursor-pointer hover:shadow-xl"
+      [routerLink]="['/news', headline.news_id]"
+      *ngFor="let headline of news.news"
+      [headline]="headline"
+    ></app-headline>
+  </ng-container>
+
+  <ng-template #noNews>
+    <p class="font-sansSerif my-8">No hay noticias</p>
+  </ng-template>
+</div>
