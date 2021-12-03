@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   receiveNews() {
     const from = Math.floor(Math.random() * 396);
 
-    this.newsService.getAllNews(0, 10).subscribe((news) => {
+    this.newsService.getAllNews(from, 10).subscribe((news) => {
       this.news = news;
     });
   }

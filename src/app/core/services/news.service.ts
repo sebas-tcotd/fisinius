@@ -23,7 +23,7 @@ export class NewsService {
     const params: HttpParams = new HttpParams()
       .set('from', from)
       .set('limit', quantity)
-      .set('category', category as string);
+      .set('category', category);
 
     return this.http.get<News>(`${this.url}/news`, { params });
   }
@@ -37,5 +37,14 @@ export class NewsService {
     const params: HttpParams = new HttpParams().set('news_id', id);
 
     return this.http.get<Article>(`${this.url}/article`, { params });
+  }
+
+  getNewsByCategory(from: number, quantity: number, category: string) {
+    const params = new HttpParams()
+      .set('from', from)
+      .set('limit', quantity)
+      .set('category', category);
+
+    return this.http.get<News>(`${this.url}/news`, { params });
   }
 }

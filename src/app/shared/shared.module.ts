@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { ImgNewsPipe } from './pipes/img-news.pipe';
 import { RouterModule } from '@angular/router';
+import { HeadlineComponent } from './components/headline/headline.component';
 
 @NgModule({
-  declarations: [HeaderComponent, ImgNewsPipe],
+  declarations: [HeaderComponent, ImgNewsPipe, HeadlineComponent],
   imports: [CommonModule, RouterModule],
-  exports: [HeaderComponent, ImgNewsPipe],
+  exports: [HeaderComponent, ImgNewsPipe, HeadlineComponent],
 })
 export class SharedModule {}
