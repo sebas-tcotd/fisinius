@@ -1,6 +1,6 @@
 <div class="md:flex md:flex-col-reverse">
   <!-- News image -->
-  <img class="w-full my-4" [src]="articleImage | imgNews" />
+  <img class="w-full my-4" [src]="articleImage | imgNews | async" />
 
   <!-- News title and data -->
   <div class="flex flex-col">

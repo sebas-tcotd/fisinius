@@ -1,5 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map, of, Subject, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Article } from '../interfaces/article.interface';
 import { News } from '../interfaces/news.interfaces';
@@ -11,6 +12,14 @@ export class NewsService {
   url: string = environment.NEWS_URL_BASE;
 
   constructor(private http: HttpClient) {}
+
+  private searchKeywordSource = new Subject<any>();
+  searchKeyword$ = this.searchKeywordSource.asObservable();
+  // sendWord(keyword: string) {
+  //   this.searchKeywordSource.next(
+  //     this.searchNews(keyword).pipe(tap((res) => console.log(res)))
+  //   );
+  // }
 
   /**
    * Recibe todas las noticias habidas en la DB
@@ -46,5 +55,13 @@ export class NewsService {
       .set('category', category);
 
     return this.http.get<News>(`${this.url}/news`, { params });
+  }
+
+  searchNews(newsWord: string) {
+    const params = new HttpParams().set('news_word', newsWord);
+
+    return this.http
+      .get(`${this.url}/news/search`, { params })
+      .pipe(tap((news) => this.searchKeywordSource.next(news)));
   }
 }

@@ -1,15 +1,20 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { SafeStyle, SafeUrl } from '@angular/platform-browser';
 
 @Pipe({
   name: 'imgNews',
 })
 export class ImgNewsPipe implements PipeTransform {
-  transform(value: string) {
-    if (value === '') {
-      return '../../../../../assets/img/news-placeholder.webp';
-    } else {
-      return value;
+  defaultImage: string = '../../../../../assets/img/news-placeholder.webp';
+
+  async transform(url: string) {
+    if (url === '' || (await this.verifyImage(url)) !== 200) {
+      return this.defaultImage;
     }
+    return url;
+  }
+
+  async verifyImage(url: string) {
+    const response = await fetch(url);
+    return response.status;
   }
 }
