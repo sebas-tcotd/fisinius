@@ -38,42 +38,70 @@
   <a
     class="flex-grow text-center font-serif | md:text-left md:text-3xl"
     [routerLink]="['/home']"
-    routerLinkActive="router-link-active"
+    [ngClass]="{ 'md:block': isSearchOpen, hidden: isSearchOpen }"
     >Fisiniús</a
   >
 
-  <nav class="hidden font-serif | md:flex md:justify-around">
+  <nav class="hidden font-serif | md:flex md:justify-around" #sections>
     <a
       class="mx-4 cursor-pointer hover:font-bold"
       [routerLink]="['/home']"
       routerLinkActive="border-b-2 border-black"
+      (isActiveChange)="onRouterLinkActive($event)"
       >Inicio</a
     >
     <a
       class="mx-4 cursor-pointer hover:font-bold"
       routerLink="/section/politica"
       routerLinkActive="border-b-2 border-black"
+      (isActiveChange)="onRouterLinkActive($event)"
       >Política</a
     >
     <a
       class="mx-4 cursor-pointer hover:font-bold"
       routerLink="/section/salud"
       routerLinkActive="border-b-2 border-black"
+      (isActiveChange)="onRouterLinkActive($event)"
       >Salud</a
     >
     <a
       class="mx-4 cursor-pointer hover:font-bold"
       routerLink="/section/deporte"
       routerLinkActive="border-b-2 border-black"
+      (isActiveChange)="onRouterLinkActive($event)"
       >Deportes</a
     >
     <a
       class="mx-4 cursor-pointer hover:font-bold"
       routerLink="/section/ciencia"
       routerLinkActive="border-b-2 border-black"
+      (isActiveChange)="onRouterLinkActive($event)"
       >Ciencias</a
     >
   </nav>
+
+  <input
+    #searchInput
+    type="search"
+    placeholder="Busca una noticia"
+    class="
+      w-full
+      mx-1
+      px-2
+      py-1
+      border-2 border-black
+      focus:outline-black
+      |
+      hidden
+      |
+      font-sansSerif
+      |
+      md:w-72
+    "
+    [ngClass]="{ hidden: !isSearchOpen }"
+    value=""
+    (keyup.enter)="onSearchInput(searchInput.value)"
+  />
 
   <button
     class="
@@ -89,6 +117,7 @@
       transition
       duration-200
     "
+    (click)="toggleSearch()"
   >
     <span class="material-icons">search</span>
   </button>
