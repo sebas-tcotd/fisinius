@@ -7,14 +7,21 @@ export class ImgNewsPipe implements PipeTransform {
   defaultImage: string = '../../../../../assets/img/news-placeholder.webp';
 
   async transform(url: string) {
-    if (url === '' || (await this.verifyImage(url)) !== 200) {
-      return this.defaultImage;
+    if (await this.verifyImage(url)) {
+      return url;
     }
-    return url;
+    return this.defaultImage;
   }
 
-  async verifyImage(url: string) {
-    const response = await fetch(url);
-    return response.status;
+  async verifyImage(url: string | null | undefined): Promise<boolean> {
+    if (!url) {
+      return false;
+    }
+    return new Promise((res) => {
+      const image = new Image();
+      image.onload = () => res(true);
+      image.onerror = () => res(false);
+      image.src = url;
+    });
   }
 }
