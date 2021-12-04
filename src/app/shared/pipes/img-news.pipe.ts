@@ -13,7 +13,7 @@ export class ImgNewsPipe implements PipeTransform {
     return this.defaultImage;
   }
 
-  async verifyImage(url: string) {
+  async verifyImage(url: string | null | undefined): Promise<boolean> {
     if (!url) {
       return false;
     }
