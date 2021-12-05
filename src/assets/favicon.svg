@@ -1,0 +1,13 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+  path {
+      fill: #000;
+  }
+  @media (prefers-color-scheme: dark) {
+      path {
+          fill: #fff;
+      }
+  }
+</style>
+<path fill-rule="evenodd" d="M16 1L14.664 2.29889L13.336 1L12 2.29889L10.664 1L9.336 2.29889L8 1L6.664 2.29889L5.336 1L4 2.29889L2.664 1L1.336 2.29889L0 1V15H16V1ZM7.2 13.4444H1.6V8.77778H7.2V13.4444ZM14.4 13.4444H8.8V11.8889H14.4V13.4444ZM14.4 10.3333H8.8V8.77778H14.4V10.3333ZM14.4 7.22222H1.6V4.88889H14.4V7.22222Z" />
+</svg>
