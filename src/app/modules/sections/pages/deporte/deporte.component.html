@@ -1,13 +1,4 @@
-<div
-  class="
-    md:container
-    px-6
-    |
-    lg:px-0 lg:grid lg:grid-cols-3
-    |
-    font-serif
-  "
->
+<div class="md:container px-6 | lg:px-0 lg:grid lg:grid-cols-3 | font-serif">
   <ng-container *ngIf="news.news.length > 0; else noNews">
     <app-headline
       class="cursor-pointer hover:shadow-xl"
@@ -18,6 +9,6 @@
   </ng-container>
 
   <ng-template #noNews>
-    <p class="font-sansSerif my-8">No hay noticias</p>
+    <shared-loading></shared-loading>
   </ng-template>
 </div>

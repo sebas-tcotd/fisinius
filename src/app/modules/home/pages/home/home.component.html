@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4">
+<div class="container mx-auto px-4 min-h-screen">
   <main class="font-serif">
     <h1 class="font-bold text-2xl px-6 | lg:px-0">Últimas noticias</h1>
 
@@ -11,10 +11,9 @@
           [headline]="headline"
         ></app-headline>
       </ng-container>
-
-      <ng-template #noNews>
-        <p class="font-sansSerif my-8">No hay noticias</p>
-      </ng-template>
     </div>
+    <ng-template #noNews>
+      <shared-loading></shared-loading>
+    </ng-template>
   </main>
 </div>
