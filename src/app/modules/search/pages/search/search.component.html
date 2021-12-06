@@ -3,17 +3,50 @@
     <h1 class="font-bold text-2xl px-6 | lg:px-0">Últimas noticias</h1>
 
     <div class="md:container px-6 | lg:px-0 lg:grid lg:grid-cols-3">
-      <ng-container *ngIf="headlines && headlines.length > 0; else noNews">
-        <app-headline
-          class="cursor-pointer hover:shadow-xl"
-          [routerLink]="['/news', headline.news_id]"
-          *ngFor="let headline of headlines"
-          [headline]="headline"
-        ></app-headline>
-      </ng-container>
+      <shared-loading *ngIf="isPageLoading; else notLoading"></shared-loading>
+
+      <ng-template #notLoading>
+        <div
+          *ngIf="headlines && headlines.length > 0; then news; else noNews"
+        ></div>
+
+        <ng-template #news>
+          <app-headline
+            class="cursor-pointer hover:shadow-xl"
+            [routerLink]="['/news', headline.news_id]"
+            *ngFor="let headline of headlines"
+            [headline]="headline"
+          ></app-headline>
+        </ng-template>
+
+        <ng-template #noNews>
+          <div
+            class="
+              mt-10
+              py-4
+              flex flex-col
+              items-center
+              space-y-2
+              border-black border-2
+              |
+              md:max-w-md md:mx-auto
+              lg:my-10
+            "
+          >
+            <p class="font-serif text-lg">Sin noticias</p>
+            <div class="px-4 text-center">
+              <p class="font-sansSerif text-base mb-2">
+                No hay noticias que coincida con su búsqueda
+              </p>
+
+              <p class="font-sansSerif text-xs leading-none mb-6">
+                O bien ingresaste acá directamente sin haber buscado.
+              </p>
+            </div>
+            <span class="material-icons text-6xl"> error </span>
+          </div>
+        </ng-template>
+      </ng-template>
     </div>
-    <ng-template #noNews>
-      <shared-loading></shared-loading>
-    </ng-template>
   </main>
 </div>
