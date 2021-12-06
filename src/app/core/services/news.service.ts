@@ -1,9 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, of, Subject, tap } from 'rxjs';
+import { map, Observable, of, Subject, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Article } from '../interfaces/article.interface';
-import { News } from '../interfaces/news.interfaces';
+import { News, NewsElement } from '../interfaces/news.interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +14,8 @@ export class NewsService {
   constructor(private http: HttpClient) {}
 
   private searchKeywordSource = new Subject<any>();
-  searchKeyword$ = this.searchKeywordSource.asObservable();
+  searchKeyword$: Observable<News> =
+    this.searchKeywordSource.asObservable();
   // sendWord(keyword: string) {
   //   this.searchKeywordSource.next(
   //     this.searchNews(keyword).pipe(tap((res) => console.log(res)))

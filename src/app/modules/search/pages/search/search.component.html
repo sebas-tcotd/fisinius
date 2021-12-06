@@ -1,2 +1,19 @@
-<p>search works!</p>
-<p>{{ searchWord }}</p>
+<div class="container mx-auto px-6 min-h-screen">
+  <main class="font-serif">
+    <h1 class="font-bold text-2xl px-6 | lg:px-0">Últimas noticias</h1>
+
+    <div class="md:container px-6 | lg:px-0 lg:grid lg:grid-cols-3">
+      <ng-container *ngIf="headlines && headlines.length > 0; else noNews">
+        <app-headline
+          class="cursor-pointer hover:shadow-xl"
+          [routerLink]="['/news', headline.news_id]"
+          *ngFor="let headline of headlines"
+          [headline]="headline"
+        ></app-headline>
+      </ng-container>
+    </div>
+    <ng-template #noNews>
+      <shared-loading></shared-loading>
+    </ng-template>
+  </main>
+</div>
