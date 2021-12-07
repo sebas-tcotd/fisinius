@@ -1,6 +1,11 @@
-<div class="container mx-auto px-6 min-h-screen">
+<div class="container mx-auto px-6">
   <main class="font-serif">
-    <h1 class="font-bold text-2xl px-6 | lg:px-0">Últimas noticias</h1>
+    <h1
+      class="font-bold text-2xl px-6 | lg:px-0"
+      [ngClass]="{ hidden: !isPageLoading }"
+    >
+      Resultados de búsqueda
+    </h1>
 
     <div class="md:container px-6 | lg:px-0 lg:grid lg:grid-cols-3">
       <shared-loading *ngIf="isPageLoading; else notLoading"></shared-loading>
@@ -22,7 +27,7 @@
         <ng-template #noNews>
           <div
             class="
-              mt-10
+              my-[50%]
               py-4
               flex flex-col
               items-center
