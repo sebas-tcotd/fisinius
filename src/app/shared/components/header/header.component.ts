@@ -19,12 +19,14 @@ import { NewsService } from 'src/app/core/services/news.service';
 export class HeaderComponent {
   @Input() isSidebarOpen: boolean = false;
   @Output() openSignEmitter: EventEmitter<boolean> = new EventEmitter();
+  @Output() modalStatusEmitter: EventEmitter<boolean> = new EventEmitter();
   @Output() searchWordEmitter: EventEmitter<string> = new EventEmitter();
   @ViewChildren(RouterLinkActive, { read: ElementRef })
   elementsWithRouterLinkActive!: QueryList<ElementRef>;
   sectionsElements: any[] = [];
   isSomeSectionActive: boolean = false;
   isSearchOpen: boolean = false;
+  @Input() isModalActive: boolean = false;
 
   constructor(private router: Router, private news: NewsService) {}
 
@@ -95,5 +97,14 @@ export class HeaderComponent {
       this.router.navigateByUrl('/search');
     }
     this.news.searchNews(event).subscribe();
+  }
+
+  toggleModal() {
+    this.isModalActive = !this.isModalActive;
+    this.modalStatusEmitter.emit(this.isModalActive);
+  }
+  receiveModalStatus(event: boolean) {
+    this.isModalActive = event;
+    this.modalStatusEmitter.emit(this.isModalActive);
   }
 }

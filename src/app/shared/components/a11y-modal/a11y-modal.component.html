@@ -1,0 +1,61 @@
+<!-- Overlay -->
+<div
+  class="bg-black bg-opacity-50 fixed inset-0 hidden justify-center items-center"
+  id="overlay"
+  #modalOverlay
+>
+  <!-- Modal -->
+  <div class="mx-4 bg-white max-w-md py-2 px-3 shadow-xl relative">
+    <!-- Modal header -->
+    <div class="mt-2 lg:mt-0">
+      <h4 class="text-lg font-bold font-serif">Accesibilidad</h4>
+      <button
+        class="
+          absolute
+          top-0
+          right-0
+          p-4
+          lg:p-2
+          flex flex-none
+          items-center
+          hover:bg-black hover:text-white
+        "
+        id="close-modal-btn"
+        (click)="closeModal()"
+      >
+        <i class="material-icons"> close </i>
+      </button>
+    </div>
+    <!-- Modal options -->
+    <div class="mt-4 font-sansSerif">
+      <app-a11y-form></app-a11y-form>
+    </div>
+    <!-- Modal footer -->
+    <div class="my-3 flex justify-end space-x-3">
+      <button
+        class="
+          px-3
+          py-1
+          border-2 border-black
+          hover:bg-black hover:text-white
+          active:outline-black
+        "
+      >
+        Cancelar
+      </button>
+      <button
+        class="
+          px-3
+          py-1
+          bg-black
+          text-white
+          active:outline-black
+          hover:bg-gray-800
+        "
+        id="apply-a11y"
+      >
+        Aplicar
+      </button>
+    </div>
+  </div>
+</div>
