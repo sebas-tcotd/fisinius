@@ -4,3 +4,9 @@ input:checked ~ .dot {
 input:checked ~ .line {
   background-color: black;
 }
+
+@media (prefers-color-scheme: dark) {
+  input:checked ~ .line {
+    background-color: white;
+  }
+}

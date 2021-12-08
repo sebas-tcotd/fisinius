@@ -24,6 +24,8 @@
     transition
     duration-200
     ease-in-out
+    ||
+    dark:bg-gray-800 dark:bg-opacity-70 dark:text-gray-200
   "
   [class.-translate-x-full]="!isSidebarOpen"
 >
@@ -42,7 +44,7 @@
   <nav>
     <a
       routerLink="/home"
-      routerLinkActive="border-l-4 border-black"
+      routerLinkActive="border-l-4 border-black | dark:border-gray-200"
       class="
         block
         py-2.5
@@ -51,6 +53,8 @@
         transition
         duration-200
         hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
       "
       (mouseup)="closeSidebar()"
     >
@@ -61,7 +65,7 @@
 
     <a
       routerLink="/section/politica"
-      routerLinkActive="border-l-4 border-black"
+      routerLinkActive="border-l-4 border-black | dark:border-gray-200"
       class="
         block
         py-2.5
@@ -70,6 +74,8 @@
         transition
         duration-200
         hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
       "
       (mouseup)="closeSidebar()"
     >
@@ -77,7 +83,7 @@
     </a>
     <a
       routerLink="/section/salud"
-      routerLinkActive="border-l-4 border-black"
+      routerLinkActive="border-l-4 border-black | dark:border-gray-200"
       class="
         block
         py-2.5
@@ -86,6 +92,8 @@
         transition
         duration-200
         hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
       "
       (mouseup)="closeSidebar()"
     >
@@ -93,7 +101,7 @@
     </a>
     <a
       routerLink="/section/deporte"
-      routerLinkActive="border-l-4 border-black"
+      routerLinkActive="border-l-4 border-black | dark:border-gray-200"
       class="
         block
         py-2.5
@@ -102,6 +110,8 @@
         transition
         duration-200
         hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
       "
       (mouseup)="closeSidebar()"
     >
@@ -109,7 +119,7 @@
     </a>
     <a
       routerLink="/section/ciencia"
-      routerLinkActive="border-l-4 border-black"
+      routerLinkActive="border-l-4 border-black | dark:border-gray-200"
       class="
         block
         py-2.5
@@ -118,6 +128,8 @@
         transition
         duration-200
         hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
       "
       (mouseup)="closeSidebar()"
     >
@@ -125,7 +137,14 @@
     </a>
     <hr class="h-0.5 my-3 bg-black bg-opacity-25" />
     <button
-      class="flex items-center w-full hover:bg-black hover:text-white"
+      class="
+        flex
+        items-center
+        w-full
+        hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
+      "
       (mouseup)="toggleA11yModal()"
     >
       <span class="material-icons pl-4">settings_accessibility</span>
