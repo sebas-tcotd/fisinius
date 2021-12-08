@@ -1,155 +1,149 @@
 <header
   class="
-    lg:container
-    mx-auto
     mb-6
     transition-all
     example-toolbar
-    |
-    flex
-    items-center
-    |
-    md:pl-6
-    ||
     dark:bg-gray-800 dark:text-gray-200
   "
   #cabecera
 >
-  <a
-    #mobileMenu
-    class="
-      flex-none flex
-      items-center
-      justify-center
-      |
-      w-16
-      h-16
-      |
-      md:hidden
-      |
-      active:bg-gray-200
-      |
-      transition
-      duration-200
-      dark:active:bg-gray-700
-    "
-    (click)="toggleSidebar()"
-  >
-    <span class="material-icons">menu</span>
-  </a>
-
-  <a
-    class="flex-grow text-center font-serif | md:text-left md:text-3xl"
-    [routerLink]="['/home']"
-    [ngClass]="{ 'md:block': isSearchOpen, hidden: isSearchOpen }"
-    >Fisiniús</a
-  >
-
-  <nav class="hidden font-serif | md:flex md:justify-around" #sections>
+  <div class="flex items-center lg:container mx-auto md:pl-6">
     <a
-      class="mx-4 cursor-pointer hover:font-bold"
+      #mobileMenu
+      class="
+        flex-none flex
+        items-center
+        justify-center
+        |
+        w-16
+        h-16
+        |
+        md:hidden
+        |
+        active:bg-gray-200
+        |
+        transition
+        duration-200
+        dark:active:bg-gray-700
+      "
+      (click)="toggleSidebar()"
+    >
+      <span class="material-icons">menu</span>
+    </a>
+
+    <a
+      class="flex-grow text-center font-serif | md:text-left md:text-3xl"
       [routerLink]="['/home']"
-      routerLinkActive="border-b-2 border-black | dark:border-gray-200"
-      (isActiveChange)="onRouterLinkActive($event)"
-      >Inicio</a
+      [ngClass]="{ 'md:block': isSearchOpen, hidden: isSearchOpen }"
+      >Fisiniús</a
     >
-    <a
-      class="mx-4 cursor-pointer hover:font-bold"
-      routerLink="/section/politica"
-      routerLinkActive="border-b-2 border-black | dark:border-gray-200"
-      (isActiveChange)="onRouterLinkActive($event)"
-      >Política</a
-    >
-    <a
-      class="mx-4 cursor-pointer hover:font-bold"
-      routerLink="/section/salud"
-      routerLinkActive="border-b-2 border-black | dark:border-gray-200"
-      (isActiveChange)="onRouterLinkActive($event)"
-      >Salud</a
-    >
-    <a
-      class="mx-4 cursor-pointer hover:font-bold"
-      routerLink="/section/deporte"
-      routerLinkActive="border-b-2 border-black | dark:border-gray-200"
-      (isActiveChange)="onRouterLinkActive($event)"
-      >Deportes</a
-    >
-    <a
-      class="mx-4 cursor-pointer hover:font-bold"
-      routerLink="/section/ciencia"
-      routerLinkActive="border-b-2 border-black | dark:border-gray-200"
-      (isActiveChange)="onRouterLinkActive($event)"
-      >Ciencias</a
-    >
-  </nav>
 
-  <input
-    #searchInput
-    type="search"
-    placeholder="Busca una noticia"
-    class="
-      w-full
-      mx-1
-      px-2
-      py-1
-      border-2 border-black
-      focus:outline-black
-      |
-      hidden
-      |
-      font-sansSerif
-      |
-      md:w-72
-      ||
-      dark:border-gray-200 dark:bg-gray-800 dark:focus:outline-white
-    "
-    [ngClass]="{ hidden: !isSearchOpen }"
-    value=""
-    (keyup.enter)="onSearchInput(searchInput.value)"
-  />
+    <nav class="hidden font-serif | md:flex md:justify-around" #sections>
+      <a
+        class="mx-4 cursor-pointer hover:font-bold"
+        [routerLink]="['/home']"
+        routerLinkActive="border-b-2 border-black | dark:border-gray-200"
+        (isActiveChange)="onRouterLinkActive($event)"
+        >Inicio</a
+      >
+      <a
+        class="mx-4 cursor-pointer hover:font-bold"
+        routerLink="/section/politica"
+        routerLinkActive="border-b-2 border-black | dark:border-gray-200"
+        (isActiveChange)="onRouterLinkActive($event)"
+        >Política</a
+      >
+      <a
+        class="mx-4 cursor-pointer hover:font-bold"
+        routerLink="/section/salud"
+        routerLinkActive="border-b-2 border-black | dark:border-gray-200"
+        (isActiveChange)="onRouterLinkActive($event)"
+        >Salud</a
+      >
+      <a
+        class="mx-4 cursor-pointer hover:font-bold"
+        routerLink="/section/deporte"
+        routerLinkActive="border-b-2 border-black | dark:border-gray-200"
+        (isActiveChange)="onRouterLinkActive($event)"
+        >Deportes</a
+      >
+      <a
+        class="mx-4 cursor-pointer hover:font-bold"
+        routerLink="/section/ciencia"
+        routerLinkActive="border-b-2 border-black | dark:border-gray-200"
+        (isActiveChange)="onRouterLinkActive($event)"
+        >Ciencias</a
+      >
+    </nav>
 
-  <button
-    class="
-      flex-none flex
-      items-center
-      justify-center
-      |
-      w-16
-      h-16
-      |
-      active:bg-gray-200
-      |
-      transition
-      duration-200
-      ||
-      dark:active:bg-gray-700
-    "
-    (click)="toggleSearch()"
-  >
-    <span class="material-icons">search</span>
-  </button>
-  <button
-    class="
-      flex-none
-      |
-      w-16
-      h-16
-      |
-      hidden
-      md:block
-      |
-      active:bg-gray-200
-      |
-      transition
-      duration-200
-    "
-    (click)="toggleModal()"
-  >
-    <span class="material-icons">settings_accessibility</span>
-  </button>
+    <input
+      #searchInput
+      type="search"
+      placeholder="Busca una noticia"
+      class="
+        w-full
+        mx-1
+        px-2
+        py-1
+        border-2 border-black
+        focus:outline-black
+        |
+        hidden
+        |
+        font-sansSerif
+        |
+        md:w-72
+        ||
+        dark:border-gray-200 dark:bg-gray-800 dark:focus:outline-white
+      "
+      [ngClass]="{ hidden: !isSearchOpen }"
+      value=""
+      (keyup.enter)="onSearchInput(searchInput.value)"
+    />
 
-  <app-a11y-modal
-    [isModalActive]="isModalActive"
-    (modalStatusEmitter)="receiveModalStatus($event)"
-  ></app-a11y-modal>
+    <button
+      class="
+        flex-none flex
+        items-center
+        justify-center
+        |
+        w-16
+        h-16
+        |
+        active:bg-gray-200
+        |
+        transition
+        duration-200
+        ||
+        dark:active:bg-gray-700
+      "
+      (click)="toggleSearch()"
+    >
+      <span class="material-icons">search</span>
+    </button>
+    <button
+      class="
+        flex-none
+        |
+        w-16
+        h-16
+        |
+        hidden
+        md:block
+        |
+        active:bg-gray-200
+        |
+        transition
+        duration-200
+      "
+      (click)="toggleModal()"
+    >
+      <span class="material-icons">settings_accessibility</span>
+    </button>
+
+    <app-a11y-modal
+      [isModalActive]="isModalActive"
+      (modalStatusEmitter)="receiveModalStatus($event)"
+    ></app-a11y-modal>
+  </div>
 </header>

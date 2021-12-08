@@ -14,7 +14,7 @@ import { NewsService } from 'src/app/core/services/news.service';
 @Component({
   selector: 'shared-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  styleUrls: [],
 })
 export class HeaderComponent {
   @Input() isSidebarOpen: boolean = false;
