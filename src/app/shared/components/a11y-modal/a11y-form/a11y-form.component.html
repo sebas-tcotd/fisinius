@@ -1,0 +1,25 @@
+<form action="">
+  <!-- Dark mode option -->
+  <label
+    for="dark-mode"
+    class="flex items-center justify-between space-x-2 cursor-pointer"
+  >
+    <!-- label -->
+    <div class="text-black font-medium || dark:text-gray-200">Modo oscuro</div>
+    <!-- toggle -->
+    <div class="relative">
+      <!-- input -->
+      <input
+        type="checkbox"
+        id="dark-mode"
+        class="sr-only"
+        (click)="toggleDarkMode()"
+        #darkMode
+      />
+      <!-- line -->
+      <div class="block line bg-gray-300 w-14 h-8 transition"></div>
+      <!-- dot -->
+      <div class="dot absolute left-1 top-1 bg-white w-6 h-6 transition || dark:bg-gray-700"></div>
+    </div>
+  </label>
+</form>

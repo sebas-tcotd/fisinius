@@ -1,7 +1,7 @@
 <div class="container mx-auto px-6">
   <main class="font-serif">
     <h1
-      class="font-bold text-2xl px-6 | lg:px-0"
+      class="font-bold text-2xl px-6 | lg:px-0 || dark:text-gray-200"
       [ngClass]="{ hidden: !isPageLoading }"
     >
       Resultados de búsqueda
@@ -36,19 +36,31 @@
               |
               md:max-w-md md:mx-auto
               lg:my-10
+              ||
+              dark:border-gray-200
             "
           >
-            <p class="font-serif text-lg">Sin noticias</p>
+            <p class="font-serif text-lg dark:text-gray-200">Sin noticias</p>
             <div class="px-4 text-center">
-              <p class="font-sansSerif text-base mb-2">
+              <p class="font-sansSerif text-base mb-2 dark:text-gray-200">
                 No hay noticias que coincida con su búsqueda
               </p>
 
-              <p class="font-sansSerif text-xs leading-none mb-6">
+              <p
+                class="
+                  font-sansSerif
+                  text-xs
+                  leading-none
+                  mb-6
+                  dark:text-gray-400
+                "
+              >
                 O bien ingresaste acá directamente sin haber buscado.
               </p>
             </div>
-            <span class="material-icons text-6xl"> error </span>
+            <span class="material-icons text-6xl dark:text-gray-200">
+              error
+            </span>
           </div>
         </ng-template>
       </ng-template>

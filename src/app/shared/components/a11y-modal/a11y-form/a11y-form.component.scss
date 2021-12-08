@@ -1,0 +1,12 @@
+input:checked ~ .dot {
+  transform: translateX(100%);
+}
+input:checked ~ .line {
+  background-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  input:checked ~ .line {
+    background-color: white;
+  }
+}

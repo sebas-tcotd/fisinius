@@ -6,7 +6,7 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="color-scheme" content="dark light" />
+    <!-- <meta name="color-scheme" content="dark light" /> -->
     <link rel="icon" href="./assets/favicon.svg" />
     <link rel="mask-icon" href="./assets/favicon.svg" color="#000000" />
     <link
@@ -19,8 +19,21 @@
       href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Playfair+Display&display=swap"
       rel="stylesheet"
     />
+    <script>
+      if (
+        localStorage["theme"] === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      }
+    </script>
   </head>
-  <body>
+  <body class="dark:bg-gray-900">
     <app-root></app-root>
   </body>
 </html>

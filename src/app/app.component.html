@@ -1,11 +1,15 @@
 <shared-header
   (openSignEmitter)="receiveToggleStatus($event)"
   (searchWordEmitter)="receiveSearchLetter($event)"
+  (modalStatusEmitter)="receiveModalStatus($event)"
   [isSidebarOpen]="isSidebarOpen"
+  [isModalActive]="isModalOpen"
 ></shared-header>
 
 <shared-sidebar
   (closeSignEmitter)="receiveToggleStatus($event)"
+  (closeModalEmitter)="receiveModalStatus($event)"
+  [isModalActive]="isModalOpen"
   [isSidebarOpen]="isSidebarOpen"
 ></shared-sidebar>
 

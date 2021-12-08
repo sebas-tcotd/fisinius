@@ -7,14 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isSidebarOpen: boolean = false;
+  isModalOpen: boolean = false;
   searchLetter: string = '';
 
   receiveToggleStatus(event: boolean) {
     this.isSidebarOpen = event;
   }
   receiveSearchLetter(event: string) {
-    console.log(event);
-
     this.searchLetter = event;
+  }
+  receiveModalStatus(event: boolean) {
+    this.isModalOpen = event;
   }
 }

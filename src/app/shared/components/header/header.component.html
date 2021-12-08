@@ -10,6 +10,8 @@
     items-center
     |
     md:pl-6
+    ||
+    dark:bg-gray-800 dark:text-gray-200
   "
   #cabecera
 >
@@ -29,6 +31,7 @@
       |
       transition
       duration-200
+      dark:active:bg-gray-700
     "
     (click)="toggleSidebar()"
   >
@@ -46,35 +49,35 @@
     <a
       class="mx-4 cursor-pointer hover:font-bold"
       [routerLink]="['/home']"
-      routerLinkActive="border-b-2 border-black"
+      routerLinkActive="border-b-2 border-black | dark:border-gray-200"
       (isActiveChange)="onRouterLinkActive($event)"
       >Inicio</a
     >
     <a
       class="mx-4 cursor-pointer hover:font-bold"
       routerLink="/section/politica"
-      routerLinkActive="border-b-2 border-black"
+      routerLinkActive="border-b-2 border-black | dark:border-gray-200"
       (isActiveChange)="onRouterLinkActive($event)"
       >Política</a
     >
     <a
       class="mx-4 cursor-pointer hover:font-bold"
       routerLink="/section/salud"
-      routerLinkActive="border-b-2 border-black"
+      routerLinkActive="border-b-2 border-black | dark:border-gray-200"
       (isActiveChange)="onRouterLinkActive($event)"
       >Salud</a
     >
     <a
       class="mx-4 cursor-pointer hover:font-bold"
       routerLink="/section/deporte"
-      routerLinkActive="border-b-2 border-black"
+      routerLinkActive="border-b-2 border-black | dark:border-gray-200"
       (isActiveChange)="onRouterLinkActive($event)"
       >Deportes</a
     >
     <a
       class="mx-4 cursor-pointer hover:font-bold"
       routerLink="/section/ciencia"
-      routerLinkActive="border-b-2 border-black"
+      routerLinkActive="border-b-2 border-black | dark:border-gray-200"
       (isActiveChange)="onRouterLinkActive($event)"
       >Ciencias</a
     >
@@ -97,6 +100,8 @@
       font-sansSerif
       |
       md:w-72
+      ||
+      dark:border-gray-200 dark:bg-gray-800 dark:focus:outline-white
     "
     [ngClass]="{ hidden: !isSearchOpen }"
     value=""
@@ -116,6 +121,8 @@
       |
       transition
       duration-200
+      ||
+      dark:active:bg-gray-700
     "
     (click)="toggleSearch()"
   >
@@ -136,7 +143,13 @@
       transition
       duration-200
     "
+    (click)="toggleModal()"
   >
     <span class="material-icons">settings_accessibility</span>
   </button>
+
+  <app-a11y-modal
+    [isModalActive]="isModalActive"
+    (modalStatusEmitter)="receiveModalStatus($event)"
+  ></app-a11y-modal>
 </header>
