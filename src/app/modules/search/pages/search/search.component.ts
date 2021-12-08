@@ -12,7 +12,7 @@ import { NewsElement } from '../../../../core/interfaces/news.interfaces';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss'],
+  styleUrls: [],
 })
 export class SearchComponent implements OnInit, OnDestroy {
   isPageLoading: boolean = true;

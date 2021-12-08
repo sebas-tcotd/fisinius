@@ -5,7 +5,7 @@ import { NewsService } from 'src/app/core/services/news.service';
 @Component({
   selector: 'app-ciencia',
   templateUrl: './ciencia.component.html',
-  styleUrls: ['./ciencia.component.scss'],
+  styleUrls: [],
 })
 export class CienciaComponent implements OnInit {
   news: News = {

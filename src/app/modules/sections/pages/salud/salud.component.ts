@@ -5,7 +5,7 @@ import { NewsService } from 'src/app/core/services/news.service';
 @Component({
   selector: 'app-salud',
   templateUrl: './salud.component.html',
-  styleUrls: ['./salud.component.scss'],
+  styleUrls: [],
 })
 export class SaludComponent implements OnInit {
   news: News = {

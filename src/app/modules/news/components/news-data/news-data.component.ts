@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-news-data',
   templateUrl: './news-data.component.html',
-  styleUrls: ['./news-data.component.scss'],
+  styleUrls: [],
 })
 export class NewsDataComponent implements OnInit {
   @Input() articleImage: string = '';

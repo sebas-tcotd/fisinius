@@ -5,7 +5,7 @@ import { News, NewsElement } from 'src/app/core/interfaces/news.interfaces';
 @Component({
   selector: 'app-headline',
   templateUrl: './headline.component.html',
-  styleUrls: ['./headline.component.scss'],
+  styleUrls: [],
 })
 export class HeadlineComponent implements OnInit {
   @Input('headline') headline!: NewsElement;
