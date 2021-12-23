@@ -6,7 +6,7 @@ import { NewsService } from 'src/app/core/services/news.service';
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.scss'],
+  styleUrls: [],
 })
 export class NewsComponent implements OnInit {
   newsID: string = '';

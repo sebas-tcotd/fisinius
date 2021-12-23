@@ -5,7 +5,7 @@ import { NewsService } from 'src/app/core/services/news.service';
 @Component({
   selector: 'app-politics',
   templateUrl: './politics.component.html',
-  styleUrls: ['./politics.component.scss'],
+  styleUrls: [],
 })
 export class PoliticsComponent implements OnInit {
   news: News = {

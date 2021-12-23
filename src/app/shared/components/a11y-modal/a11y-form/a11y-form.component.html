@@ -1,4 +1,4 @@
-<form action="">
+<form action="" [formGroup]="a11yForm">
   <!-- Dark mode option -->
   <label
     for="dark-mode"
@@ -19,7 +19,48 @@
       <!-- line -->
       <div class="block line bg-gray-300 w-14 h-8 transition"></div>
       <!-- dot -->
-      <div class="dot absolute left-1 top-1 bg-white w-6 h-6 transition || dark:bg-gray-700"></div>
+      <div
+        class="
+          dot
+          absolute
+          left-1
+          top-1
+          bg-white
+          w-6
+          h-6
+          transition
+          ||
+          dark:bg-gray-700
+        "
+      ></div>
     </div>
+  </label>
+  <hr class="my-4 || dark:border-gray-700">
+  <!-- Color-blind mode (daltónicos) -->
+  <label for="daltonic-mode">
+    <!-- Label -->
+    <div class="text-black font-medium inline-block mr-4 || dark:text-gray-200">
+      Filtro daltónico
+    </div>
+
+    <!-- Dropdown -->
+    <select
+      name="daltonic-mode"
+      id="daltonic-mode"
+      formControlName="colorblindFilter"
+      (change)="setColorblindFilter()"
+      class="dark:text-gray-700"
+    >
+      <option [ngValue]="'none'" selected class="dark:text-gray-700">
+        Ninguno
+      </option>
+      <option
+        *ngFor="let filter of colorblindFilters"
+        [ngValue]="filter.value"
+        class="dark:text-gray-700"
+      >
+        {{ filter.name }}
+      </option>
+    </select>
   </label>
 </form>

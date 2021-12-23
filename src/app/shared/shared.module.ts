@@ -9,6 +9,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { A11yModalComponent } from './components/a11y-modal/a11y-modal.component';
 import { A11yFormComponent } from './components/a11y-modal/a11y-form/a11y-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,14 +22,14 @@ import { A11yFormComponent } from './components/a11y-modal/a11y-form/a11y-form.c
     A11yModalComponent,
     A11yFormComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
   exports: [
     HeaderComponent,
     ImgNewsPipe,
     HeadlineComponent,
     FooterComponent,
     SidebarComponent,
-    LoadingComponent
+    LoadingComponent,
   ],
 })
 export class SharedModule {}

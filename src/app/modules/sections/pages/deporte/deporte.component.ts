@@ -5,7 +5,7 @@ import { NewsService } from 'src/app/core/services/news.service';
 @Component({
   selector: 'app-deporte',
   templateUrl: './deporte.component.html',
-  styleUrls: ['./deporte.component.scss'],
+  styleUrls: [],
 })
 export class DeporteComponent implements OnInit {
   news: News = {

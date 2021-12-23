@@ -1,7 +1,7 @@
 module.exports = {
   mode: "jit",
   purge: ["./src/**/*.{html,ts,scss}"],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     fontFamily: {
       serif: ["Playfair Display", "serif"],
@@ -18,5 +18,5 @@ module.exports = {
       height: ["responsive", "first"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

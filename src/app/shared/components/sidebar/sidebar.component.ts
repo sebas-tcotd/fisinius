@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'shared-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss'],
+  styleUrls: [],
 })
 export class SidebarComponent implements OnInit {
   @Output() closeSignEmitter: EventEmitter<boolean> = new EventEmitter();
