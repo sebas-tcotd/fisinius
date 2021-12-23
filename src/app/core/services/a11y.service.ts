@@ -10,6 +10,10 @@ export class A11yService {
     return localStorage.getItem('theme');
   }
 
+  checkCurrentColorblindFilter() {
+    return localStorage.getItem('color-blind-filter');
+  }
+
   toggleDarkTheme() {
     const theme = localStorage.getItem('theme');
 
@@ -20,5 +24,14 @@ export class A11yService {
       localStorage.setItem('theme', 'dark');
       document.documentElement.classList.add('dark');
     }
+  }
+
+  setColorblindFilter(filter: string) {
+    if (filter) {
+      localStorage.setItem('color-blind-filter', filter);
+    } else {
+      localStorage.setItem('color-blind-filter', 'none');
+    }
+    document.documentElement.style.filter = `url('../../../assets/img/filters.svg#${filter}')`;
   }
 }

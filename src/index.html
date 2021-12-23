@@ -31,6 +31,8 @@
         document.documentElement.classList.remove("dark");
         localStorage.setItem("theme", "light");
       }
+
+      document.documentElement.style.filter = `url('./assets/img/filters.svg#${localStorage["color-blind-filter"]}')`;
     </script>
   </head>
   <body class="dark:bg-gray-900">
