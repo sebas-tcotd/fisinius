@@ -77,12 +77,7 @@
     <!-- toggle -->
     <div class="relative">
       <!-- input -->
-      <input
-        type="checkbox"
-        id="imm-narration"
-        class="sr-only"
-        (click)="toggleImmersiveNarration()"
-      />
+      <input type="checkbox" id="imm-narration" class="sr-only" />
       <!-- line -->
       <div class="block line bg-gray-300 w-14 h-8 transition"></div>
       <!-- dot -->
@@ -102,4 +97,10 @@
       ></div>
     </div>
   </label>
+  <div
+    class="immersive-reader-button"
+    data-button-style="iconAndText"
+    data-locale="es-mx"
+    (click)="launchImmersiveReader()"
+  ></div>
 </form>

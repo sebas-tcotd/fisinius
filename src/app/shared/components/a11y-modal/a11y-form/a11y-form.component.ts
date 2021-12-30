@@ -7,6 +7,16 @@ import {
 } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { A11yService } from 'src/app/core/services/a11y.service';
+import { AzureService } from 'src/app/core/services/azure.service';
+
+declare const ImmersiveReader: {
+  launchAsync(
+    token: string,
+    subdomain: string,
+    content: any,
+    options: any
+  ): Promise<any>;
+};
 
 @Component({
   selector: 'app-a11y-form',
@@ -29,7 +39,11 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
 
   @ViewChild('darkMode') darkModeInput!: ElementRef;
 
-  constructor(private a11yService: A11yService, private fb: FormBuilder) {}
+  constructor(
+    private a11yService: A11yService,
+    private fb: FormBuilder,
+    private azure: AzureService
+  ) {}
 
   ngOnInit(): void {
     this.a11yForm = this.fb.group({
@@ -60,5 +74,38 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
 
   toggleImmersiveNarration() {
     this.a11yService.toggleImmersiveNarration();
+  }
+
+  launchImmersiveReader() {
+    const content = {
+      title: document.getElementById('ir-title')?.innerHTML,
+      chunks: [
+        {
+          content: document.getElementById('ir-body')?.innerHTML,
+          mimeType: 'text/html',
+        },
+      ],
+    };
+
+    const options = {
+      // Si hay algo que hacer cuando se cierre el lector inmmersivo, se aplicará
+      // con esta opción
+      // "onExit": exitCallback,
+      uiZIndex: 2000,
+    };
+
+    console.log('Reader!\n', content);
+
+    this.azure.getTokenAndSubdomain().subscribe(
+      (res) => {
+        ImmersiveReader.launchAsync(
+          this.azure.token,
+          this.azure.subdomain,
+          content,
+          options
+        );
+      },
+      (err) => console.log(err)
+    );
   }
 }
