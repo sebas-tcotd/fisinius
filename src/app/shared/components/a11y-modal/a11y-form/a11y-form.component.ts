@@ -94,8 +94,6 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
       uiZIndex: 2000,
     };
 
-    console.log('Reader!\n', content);
-
     this.azure.getTokenAndSubdomain().subscribe(
       (res) => {
         ImmersiveReader.launchAsync(
