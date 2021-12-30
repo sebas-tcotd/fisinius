@@ -18,12 +18,12 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
 
   colorblindFilters = [
     { value: 'protanopia', name: 'Protanopía' },
-    { value: 'protanomaly', name: 'Protanomalía' },
     { value: 'deuteranopia', name: 'Deuteranopía' },
-    { value: 'deuteranomaly', name: 'Deuteranomalía' },
     { value: 'tritanopia', name: 'Tritanopía' },
-    { value: 'tritanomaly', name: 'Tritanomalía' },
     { value: 'achromatopsia', name: 'Acromatopcia' },
+    { value: 'protanomaly', name: 'Protanomalía' },
+    { value: 'deuteranomaly', name: 'Deuteranomalía' },
+    { value: 'tritanomaly', name: 'Tritanomalía' },
     { value: 'achromatomaly', name: 'Acromatomalía' },
   ];
 
@@ -44,7 +44,6 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
     if (theme === 'dark') {
       this.darkModeInput.nativeElement.setAttribute('checked', '');
     }
-    console.log(colorFilter);
 
     this.a11yForm.setValue({ colorblindFilter: colorFilter });
   }
@@ -57,5 +56,9 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
   setColorblindFilter() {
     const filter = this.a11yForm.get('colorblindFilter')?.value;
     this.a11yService.setColorblindFilter(filter);
+  }
+
+  toggleImmersiveNarration() {
+    this.a11yService.toggleImmersiveNarration();
   }
 }

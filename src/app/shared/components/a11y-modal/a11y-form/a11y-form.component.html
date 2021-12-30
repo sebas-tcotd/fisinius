@@ -35,7 +35,7 @@
       ></div>
     </div>
   </label>
-  <hr class="my-4 || dark:border-gray-700">
+  <hr class="my-4 || dark:border-gray-700" />
   <!-- Color-blind mode (daltónicos) -->
   <label for="daltonic-mode">
     <!-- Label -->
@@ -62,5 +62,44 @@
         {{ filter.name }}
       </option>
     </select>
+  </label>
+  <hr class="my-4 || dark:border-gray-700" />
+
+  <!-- Immersive narration -->
+  <label
+    for="imm-narration"
+    class="flex items-center justify-between space-x-2 cursor-pointer"
+  >
+    <!-- Label -->
+    <div class="text-black font-medium || dark:text-gray-200">
+      Narración inmersiva
+    </div>
+    <!-- toggle -->
+    <div class="relative">
+      <!-- input -->
+      <input
+        type="checkbox"
+        id="imm-narration"
+        class="sr-only"
+        (click)="toggleImmersiveNarration()"
+      />
+      <!-- line -->
+      <div class="block line bg-gray-300 w-14 h-8 transition"></div>
+      <!-- dot -->
+      <div
+        class="
+          dot
+          absolute
+          left-1
+          top-1
+          bg-white
+          w-6
+          h-6
+          transition
+          ||
+          dark:bg-gray-700
+        "
+      ></div>
+    </div>
   </label>
 </form>

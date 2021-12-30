@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class A11yService {
+  private narrationMode = false;
   constructor() {}
 
   checkCurrentMode() {
@@ -33,5 +34,12 @@ export class A11yService {
       localStorage.setItem('color-blind-filter', 'none');
     }
     document.documentElement.style.filter = `url('../../../assets/img/filters.svg#${filter}')`;
+  }
+
+  toggleImmersiveNarration() {
+    this.narrationMode = !this.narrationMode;
+    if (this.narrationMode) {
+      console.log('Immersive narration activated!');
+    }
   }
 }
