@@ -9,7 +9,7 @@ import { News, NewsElement } from '../interfaces/news.interfaces';
   providedIn: 'root',
 })
 export class NewsService {
-  url: string = environment.NEWS_URL_BASE;
+  url: string = environment.newsUrlBase;
 
   constructor(private http: HttpClient) {}
 
