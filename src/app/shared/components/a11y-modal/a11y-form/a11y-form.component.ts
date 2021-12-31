@@ -59,7 +59,7 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
       this.darkModeInput.nativeElement.setAttribute('checked', '');
     }
 
-    this.a11yForm.setValue({ colorblindFilter: colorFilter });
+    this.a11yForm.patchValue({ colorblindFilter: colorFilter });
   }
 
   toggleDarkMode() {
@@ -70,10 +70,6 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
   setColorblindFilter() {
     const filter = this.a11yForm.get('colorblindFilter')?.value;
     this.a11yService.setColorblindFilter(filter);
-  }
-
-  toggleImmersiveNarration() {
-    this.a11yService.toggleImmersiveNarration();
   }
 
   launchImmersiveReader() {
@@ -88,9 +84,7 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
     };
 
     const options = {
-      // Si hay algo que hacer cuando se cierre el lector inmmersivo, se aplicará
-      // con esta opción
-      // "onExit": exitCallback,
+      uiLang: 'es-MX',
       uiZIndex: 2000,
     };
 

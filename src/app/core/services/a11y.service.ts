@@ -4,8 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class A11yService {
-  private narrationMode = false;
+  private _narrationMode: boolean = false;
   constructor() {}
+
+  get narrationMode() {
+    return this._narrationMode;
+  }
+
+  set narrationMode(mode: boolean) {
+    this._narrationMode = mode;
+  }
 
   checkCurrentMode() {
     return localStorage.getItem('theme');
@@ -38,8 +46,6 @@ export class A11yService {
 
   toggleImmersiveNarration() {
     this.narrationMode = !this.narrationMode;
-    if (this.narrationMode) {
-      console.log('Immersive narration activated!');
-    }
+    return this.narrationMode;
   }
 }

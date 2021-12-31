@@ -66,41 +66,25 @@
   <hr class="my-4 || dark:border-gray-700" />
 
   <!-- Immersive narration -->
-  <label
-    for="imm-narration"
-    class="flex items-center justify-between space-x-2 cursor-pointer"
-  >
-    <!-- Label -->
-    <div class="text-black font-medium || dark:text-gray-200">
-      Narración inmersiva
-    </div>
-    <!-- toggle -->
-    <div class="relative">
-      <!-- input -->
-      <input type="checkbox" id="imm-narration" class="sr-only" />
-      <!-- line -->
-      <div class="block line bg-gray-300 w-14 h-8 transition"></div>
-      <!-- dot -->
-      <div
-        class="
-          dot
-          absolute
-          left-1
-          top-1
-          bg-white
-          w-6
-          h-6
-          transition
-          ||
-          dark:bg-gray-700
-        "
-      ></div>
-    </div>
-  </label>
-  <div
-    class="immersive-reader-button"
-    data-button-style="iconAndText"
-    data-locale="es-mx"
+  <button
+    class="
+      py-3
+      px-5
+      my-2
+      bg-black
+      text-white
+      font-sansSerif
+      shadow-xl shadow-black
+      flex
+      space-x-3
+      ||
+      dark:hover:bg-gray-600 dark:bg-gray-500 dark:shadow-gray-500
+    "
+    data-locale="es-MX"
+    title="Activa el lector inmersivo"
     (click)="launchImmersiveReader()"
-  ></div>
+  >
+    <i class="material-icons"> menu_book </i>
+    <span>Lector inmersivo</span>
+  </button>
 </form>
