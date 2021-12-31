@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'shared-loading',
   templateUrl: './loading.component.html',
-  styleUrls: []
+  styleUrls: [],
 })
-export class LoadingComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class LoadingComponent {
+  constructor() {}
 }

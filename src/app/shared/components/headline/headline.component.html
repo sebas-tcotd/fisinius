@@ -32,7 +32,7 @@
   <!-- News image -->
   <img
     [src]="headline.image_url | imgNews | async"
-    alt="Noticia sin imagen"
+    [alt]="'Imagen de la noticia de' + headline.category"
     class="
       w-1/4
       h-full

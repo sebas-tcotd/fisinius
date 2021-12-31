@@ -12,6 +12,7 @@ import { Router, RouterLinkActive } from '@angular/router';
 import { NewsService } from 'src/app/core/services/news.service';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'shared-header',
   templateUrl: './header.component.html',
   styleUrls: [],
