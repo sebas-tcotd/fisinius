@@ -35,7 +35,7 @@
       ></div>
     </div>
   </label>
-  <hr class="my-4 || dark:border-gray-700">
+  <hr class="my-4 || dark:border-gray-700" />
   <!-- Color-blind mode (daltónicos) -->
   <label for="daltonic-mode">
     <!-- Label -->
@@ -63,4 +63,28 @@
       </option>
     </select>
   </label>
+  <hr class="my-4 || dark:border-gray-700" />
+
+  <!-- Immersive narration -->
+  <button
+    class="
+      py-3
+      px-5
+      my-2
+      bg-black
+      text-white
+      font-sansSerif
+      shadow-xl shadow-black
+      flex
+      space-x-3
+      ||
+      dark:hover:bg-gray-600 dark:bg-gray-500 dark:shadow-gray-500
+    "
+    data-locale="es-MX"
+    title="Activa el lector inmersivo"
+    (click)="launchImmersiveReader()"
+  >
+    <i class="material-icons"> menu_book </i>
+    <span>Lector inmersivo</span>
+  </button>
 </form>

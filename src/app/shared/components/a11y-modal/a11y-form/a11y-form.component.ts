@@ -7,6 +7,16 @@ import {
 } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { A11yService } from 'src/app/core/services/a11y.service';
+import { AzureService } from 'src/app/core/services/azure.service';
+
+declare const ImmersiveReader: {
+  launchAsync(
+    token: string,
+    subdomain: string,
+    content: any,
+    options: any
+  ): Promise<any>;
+};
 
 @Component({
   selector: 'app-a11y-form',
@@ -18,18 +28,22 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
 
   colorblindFilters = [
     { value: 'protanopia', name: 'Protanopía' },
-    { value: 'protanomaly', name: 'Protanomalía' },
     { value: 'deuteranopia', name: 'Deuteranopía' },
-    { value: 'deuteranomaly', name: 'Deuteranomalía' },
     { value: 'tritanopia', name: 'Tritanopía' },
-    { value: 'tritanomaly', name: 'Tritanomalía' },
     { value: 'achromatopsia', name: 'Acromatopcia' },
+    { value: 'protanomaly', name: 'Protanomalía' },
+    { value: 'deuteranomaly', name: 'Deuteranomalía' },
+    { value: 'tritanomaly', name: 'Tritanomalía' },
     { value: 'achromatomaly', name: 'Acromatomalía' },
   ];
 
   @ViewChild('darkMode') darkModeInput!: ElementRef;
 
-  constructor(private a11yService: A11yService, private fb: FormBuilder) {}
+  constructor(
+    private a11yService: A11yService,
+    private fb: FormBuilder,
+    private azure: AzureService
+  ) {}
 
   ngOnInit(): void {
     this.a11yForm = this.fb.group({
@@ -44,9 +58,8 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
     if (theme === 'dark') {
       this.darkModeInput.nativeElement.setAttribute('checked', '');
     }
-    console.log(colorFilter);
 
-    this.a11yForm.setValue({ colorblindFilter: colorFilter });
+    this.a11yForm.patchValue({ colorblindFilter: colorFilter });
   }
 
   toggleDarkMode() {
@@ -57,5 +70,34 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
   setColorblindFilter() {
     const filter = this.a11yForm.get('colorblindFilter')?.value;
     this.a11yService.setColorblindFilter(filter);
+  }
+
+  launchImmersiveReader() {
+    const content = {
+      title: document.getElementById('ir-title')?.innerHTML,
+      chunks: [
+        {
+          content: document.getElementById('ir-body')?.innerHTML,
+          mimeType: 'text/html',
+        },
+      ],
+    };
+
+    const options = {
+      uiLang: 'es-MX',
+      uiZIndex: 2000,
+    };
+
+    this.azure.getTokenAndSubdomain().subscribe(
+      (res) => {
+        ImmersiveReader.launchAsync(
+          this.azure.token,
+          this.azure.subdomain,
+          content,
+          options
+        );
+      },
+      (err) => console.log(err)
+    );
   }
 }

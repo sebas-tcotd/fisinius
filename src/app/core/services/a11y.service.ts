@@ -4,7 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class A11yService {
+  private _narrationMode: boolean = false;
   constructor() {}
+
+  get narrationMode() {
+    return this._narrationMode;
+  }
+
+  set narrationMode(mode: boolean) {
+    this._narrationMode = mode;
+  }
 
   checkCurrentMode() {
     return localStorage.getItem('theme');
@@ -33,5 +42,10 @@ export class A11yService {
       localStorage.setItem('color-blind-filter', 'none');
     }
     document.documentElement.style.filter = `url('../../../assets/img/filters.svg#${filter}')`;
+  }
+
+  toggleImmersiveNarration() {
+    this.narrationMode = !this.narrationMode;
+    return this.narrationMode;
   }
 }
