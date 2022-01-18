@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable, of, Subject, tap } from 'rxjs';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter, map, Observable, of, Subject, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Article } from '../interfaces/article.interface';
 import { News, NewsElement } from '../interfaces/news.interfaces';
@@ -11,11 +12,13 @@ import { News, NewsElement } from '../interfaces/news.interfaces';
 export class NewsService {
   url: string = environment.newsUrlBase;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   private searchKeywordSource = new Subject<any>();
-  searchKeyword$: Observable<News> =
-    this.searchKeywordSource.asObservable();
+  searchKeyword$: Observable<News> = this.searchKeywordSource.asObservable();
+
+  private newsIdSource = new Subject<string>();
+  newsId$: Observable<string> = this.newsIdSource.asObservable();
   // sendWord(keyword: string) {
   //   this.searchKeywordSource.next(
   //     this.searchNews(keyword).pipe(tap((res) => console.log(res)))
@@ -64,5 +67,19 @@ export class NewsService {
     return this.http
       .get(`${this.url}/news/search`, { params })
       .pipe(tap((news) => this.searchKeywordSource.next(news)));
+  }
+
+  setNewsId(id: string) {
+    this.newsIdSource.next(id);
+  }
+
+  getNewsFullUrl() {
+    return this.router.events.pipe(
+      filter((ev) => ev instanceof NavigationEnd),
+      map((ev) => {
+        if (ev instanceof NavigationEnd) return ev.url;
+        return;
+      })
+    );
   }
 }

@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class A11yService {
   private _narrationMode: boolean = false;
+  private _narrationDesactivated: boolean = false;
   constructor() {}
 
   get narrationMode() {
@@ -13,6 +14,14 @@ export class A11yService {
 
   set narrationMode(mode: boolean) {
     this._narrationMode = mode;
+  }
+
+  get narrationDesactivated(){
+    return this._narrationDesactivated;
+  }
+
+  set narrationDesactivated(status: boolean) {
+    this._narrationDesactivated = status;
   }
 
   checkCurrentMode() {
