@@ -20,24 +20,13 @@
       <div class="block line bg-gray-300 w-14 h-8 transition"></div>
       <!-- dot -->
       <div
-        class="
-          dot
-          absolute
-          left-1
-          top-1
-          bg-white
-          w-6
-          h-6
-          transition
-          ||
-          dark:bg-gray-700
-        "
+        class="dot absolute left-1 top-1 bg-white w-6 h-6 transition || dark:bg-gray-700"
       ></div>
     </div>
   </label>
   <hr class="my-4 || dark:border-gray-700" />
   <!-- Color-blind mode (daltónicos) -->
-  <label for="daltonic-mode">
+  <label for="daltonic-mode" class="flex items-center justify-between">
     <!-- Label -->
     <div class="text-black font-medium inline-block mr-4 || dark:text-gray-200">
       Filtro daltónico
@@ -67,24 +56,20 @@
 
   <!-- Immersive narration -->
   <button
-    class="
-      py-3
-      px-5
-      my-2
-      bg-black
-      text-white
-      font-sansSerif
-      shadow-xl shadow-black
-      flex
-      space-x-3
-      ||
-      dark:hover:bg-gray-600 dark:bg-gray-500 dark:shadow-gray-500
-    "
+    class="py-3 px-5 my-2 bg-black disabled:bg-opacity-30 text-white font-sansSerif shadow-xl shadow-black flex space-x-3 || dark:hover:bg-gray-600 dark:bg-gray-500 dark:shadow-gray-500 dark:disabled:bg-opacity-100 dark:disabled:bg-black"
     data-locale="es-MX"
-    title="Activa el lector inmersivo"
+    [disabled]="setNarratorStatus()"
+    [title]="
+      setNarratorStatus()
+        ? 'No es posible activar el narrador inmersivo'
+        : 'Activar el narrador inmersivo'
+    "
     (click)="launchImmersiveReader()"
   >
     <i class="material-icons"> menu_book </i>
     <span>Lector inmersivo</span>
   </button>
+  <span *ngIf="setNarratorStatus()" class="text-gray-500 || dark:text-gray-300 text-xs"
+    >El lector inmersivo solo puede ser usado en una página de noticia.</span
+  >
 </form>

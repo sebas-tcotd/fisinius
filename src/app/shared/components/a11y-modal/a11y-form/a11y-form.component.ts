@@ -8,6 +8,7 @@ import {
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { A11yService } from 'src/app/core/services/a11y.service';
 import { AzureService } from 'src/app/core/services/azure.service';
+import { NewsService } from 'src/app/core/services/news.service';
 
 declare const ImmersiveReader: {
   launchAsync(
@@ -25,6 +26,7 @@ declare const ImmersiveReader: {
 })
 export class A11yFormComponent implements OnInit, AfterViewInit {
   a11yForm!: FormGroup;
+  isNarratorDisabled: boolean = true;
 
   colorblindFilters = [
     { value: 'protanopia', name: 'Protanopía' },
@@ -42,13 +44,16 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
   constructor(
     private a11yService: A11yService,
     private fb: FormBuilder,
-    private azure: AzureService
+    private azure: AzureService,
+    private newsService: NewsService
   ) {}
 
   ngOnInit(): void {
     this.a11yForm = this.fb.group({
       colorblindFilter: [null],
     });
+
+    this.setNarratorStatus();
   }
 
   ngAfterViewInit() {
@@ -60,6 +65,11 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
     }
 
     this.a11yForm.patchValue({ colorblindFilter: colorFilter });
+  }
+
+  setNarratorStatus() {
+    this.isNarratorDisabled = this.a11yService.narrationDesactivated;
+    return this.isNarratorDisabled;
   }
 
   toggleDarkMode() {

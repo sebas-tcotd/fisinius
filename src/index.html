@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <!-- <meta name="color-scheme" content="dark light" /> -->
+    <link rel="author" type="text/plain" href="./humans.txt" />
     <link rel="icon" href="./assets/favicon.svg" />
     <link rel="mask-icon" href="./assets/favicon.svg" color="#000000" />
     <link
@@ -32,7 +33,18 @@
         localStorage.setItem("theme", "light");
       }
 
-      document.documentElement.style.filter = `url('./assets/img/filters.svg#${localStorage["color-blind-filter"]}')`;
+      // document.documentElement.style.filter = `url('./assets/img/filters.svg#${localStorage["color-blind-filter"]}')`;
+    </script>
+    <script>
+      if (
+        !localStorage["color-blind-filter"] ||
+        localStorage["color-blind-filter"] === "none"
+      ) {
+        localStorage.setItem("color-blind-filter", "none");
+      } else {
+        console.info("Filtro detectado:", localStorage["color-blind-filter"]);
+        document.documentElement.style.filter = `url('./assets/img/filters.svg#${localStorage["color-blind-filter"]}')`;
+      }
     </script>
   </head>
   <body class="dark:bg-gray-900">

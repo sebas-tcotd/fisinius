@@ -1,0 +1,37 @@
+/* PROJECT */
+
+	Site Name:   Fisiniús
+	Site URL:    https://fisinius.netlify.app/
+	Created:     2021/12/02
+	Standards:   HTML5, CSS3, JavaScript
+	Components:  Angular
+	Software:    Netlify
+	Web Design:  Sebastian Vargas
+
+/* AUTHOR */
+
+	Name:        Sebastian Vargas
+	Nickname:    tcotd
+	Title:       Front-end developer, UI Designer
+	Location:    Lima, Peru
+	Site:        https://github.com/sebas-tcotd
+	Contact:     https://www.linkedin.com/in/sebas-vargas/
+
+/* SOCIAL */
+
+	Linkedin:    https://www.linkedin.com/in/sebas-vargas/
+	Twitter:     https://twitter.com/sebas_tcotd
+	Books:       https://www.casadellibro.com/libro-sentimientos/9788418570223/12398562
+	Facebook:    https://www.facebook.com/sebastian.tcotd/
+	Instagram:   https://www.instagram.com/sebas_tcotd/
+
+/* META */
+
+	Built with: HTML, CSS, JavaScript, TypeScript, Angular, TailwindCSS, Netlify.toml :)
+
+/* THANKS */
+
+  Thanks to my friend Mauricio who developed the backend of the project and Martín for giving me support all the time.
+  I really appreciate you both so much!
+
+  And, of course, thanks to you for discovering, reading and enjoying with this humble project :)

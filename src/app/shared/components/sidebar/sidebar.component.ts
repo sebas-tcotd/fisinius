@@ -1,19 +1,18 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'shared-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: [],
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
   @Output() closeSignEmitter: EventEmitter<boolean> = new EventEmitter();
   @Output() closeModalEmitter: EventEmitter<boolean> = new EventEmitter();
   @Input() isSidebarOpen: boolean = false;
   @Input() isModalActive!: boolean;
 
   constructor() {}
-
-  ngOnInit(): void {}
 
   toggleA11yModal() {
     this.isModalActive = !this.isModalActive;

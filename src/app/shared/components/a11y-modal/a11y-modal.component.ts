@@ -3,7 +3,6 @@ import {
   ElementRef,
   Input,
   OnChanges,
-  OnInit,
   Output,
   SimpleChanges,
   ViewChild,
@@ -15,7 +14,7 @@ import {
   templateUrl: './a11y-modal.component.html',
   styleUrls: [],
 })
-export class A11yModalComponent implements OnInit, OnChanges {
+export class A11yModalComponent implements OnChanges {
   @Input() isModalActive: boolean = false;
   @Output() modalStatusEmitter = new EventEmitter<boolean>();
   @ViewChild('modalOverlay') modalOverlay!: ElementRef;
@@ -23,7 +22,6 @@ export class A11yModalComponent implements OnInit, OnChanges {
 
   constructor() {}
 
-  ngOnInit(): void {}
   ngOnChanges(changes: SimpleChanges) {
     let modalStatus = changes['isModalActive'];
     if (modalStatus.currentValue === true) {

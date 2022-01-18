@@ -1,16 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
-import { News, NewsElement } from 'src/app/core/interfaces/news.interfaces';
+import { Component, Input } from '@angular/core';
+import { NewsElement } from 'src/app/core/interfaces/news.interfaces';
 
 @Component({
   selector: 'app-headline',
   templateUrl: './headline.component.html',
   styleUrls: [],
 })
-export class HeadlineComponent implements OnInit {
-  @Input('headline') headline!: NewsElement;
+export class HeadlineComponent {
+  @Input() headline!: NewsElement;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }
