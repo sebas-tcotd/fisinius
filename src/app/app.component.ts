@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Event, NavigationEnd, NavigationStart, Router } from '@angular/router';
-import { filter, first, map, take, tap } from 'rxjs/operators';
 import { A11yService } from './core/services/a11y.service';
 import { NewsService } from './core/services/news.service';
 

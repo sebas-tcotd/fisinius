@@ -2,12 +2,10 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
-  OnDestroy,
   OnInit,
   ViewChild,
 } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ActivatedRoute, Params } from '@angular/router';
 import { A11yService } from 'src/app/core/services/a11y.service';
 import { AzureService } from 'src/app/core/services/azure.service';
 import { NewsService } from 'src/app/core/services/news.service';

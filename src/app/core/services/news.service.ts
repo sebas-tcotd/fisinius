@@ -1,10 +1,10 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { filter, map, Observable, of, Subject, tap } from 'rxjs';
+import { filter, map, Observable, Subject, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Article } from '../interfaces/article.interface';
-import { News, NewsElement } from '../interfaces/news.interfaces';
+import { News } from '../interfaces/news.interfaces';
 
 @Injectable({
   providedIn: 'root',
