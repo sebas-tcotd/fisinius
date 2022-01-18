@@ -36,12 +36,21 @@ export class A11yService {
   }
 
   setColorblindFilter(filter: string) {
-    if (filter) {
+    if (filter === 'none') {
       localStorage.setItem('color-blind-filter', filter);
+      document.documentElement.removeAttribute('style');
     } else {
-      localStorage.setItem('color-blind-filter', 'none');
+      localStorage.setItem('color-blind-filter', filter);
+      document.documentElement.style.filter = `url('../../../assets/img/filters.svg#${filter}')`;
     }
-    document.documentElement.style.filter = `url('../../../assets/img/filters.svg#${filter}')`;
+
+    /*if (filter) {
+      localStorage.setItem('color-blind-filter', filter);
+      document.documentElement.style.filter = `url('../../../assets/img/filters.svg#${filter}')`;
+    } else if (filter === 'none') {
+      // localStorage.setItem('color-blind-filter', 'none');
+      document.documentElement.removeAttribute('style');
+    }*/
   }
 
   toggleImmersiveNarration() {

@@ -33,7 +33,18 @@
         localStorage.setItem("theme", "light");
       }
 
-      document.documentElement.style.filter = `url('./assets/img/filters.svg#${localStorage["color-blind-filter"]}')`;
+      // document.documentElement.style.filter = `url('./assets/img/filters.svg#${localStorage["color-blind-filter"]}')`;
+    </script>
+    <script>
+      if (
+        !localStorage["color-blind-filter"] ||
+        localStorage["color-blind-filter"] === "none"
+      ) {
+        localStorage.setItem("color-blind-filter", "none");
+      } else {
+        console.info("Filtro detectado:", localStorage["color-blind-filter"]);
+        document.documentElement.style.filter = `url('./assets/img/filters.svg#${localStorage["color-blind-filter"]}')`;
+      }
     </script>
   </head>
   <body class="dark:bg-gray-900">
