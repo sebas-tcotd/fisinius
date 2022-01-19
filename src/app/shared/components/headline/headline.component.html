@@ -1,28 +1,19 @@
 <div
-  class="
-    flex
-    justify-between
-    my-8
-    items-center
-    |
-    lg:flex-col-reverse lg:items-start lg:p-4
-  "
+  class="flex justify-between my-8 items-center | lg:flex-col-reverse lg:items-start lg:p-4"
 >
   <!-- News data -->
   <div class="flex flex-col w-3/4 mr-4 | lg:mr-0 lg:mt-4">
     <span
-      class="
-        uppercase
-        text-gray-700 text-xs
-        tracking-widest
-        ||
-        dark:text-gray-300
-      "
+      class="uppercase text-gray-700 text-xs tracking-widest || dark:text-gray-300"
     >
       {{ headline.category }}
     </span>
-    <h3 class="text-lg | dark:text-gray-200">
-      {{ headline.title }}
+    <h3 class="text-lg | dark:text-gray-200" [title]="headline.title">
+      {{
+        headline.title.length >= 60
+          ? headline.title.slice(0, 60).trim() + "..."
+          : headline.title
+      }}
     </h3>
     <p class="text-gray-500 text-xs">
       {{ headline.abstract | slice: 0:100 }}...
@@ -33,14 +24,7 @@
   <img
     [src]="headline.image_url | imgNews | async"
     [alt]="'Imagen de la noticia de' + headline.category"
-    class="
-      w-1/4
-      h-full
-      |
-      lg:w-full lg:h-auto lg:overflow-auto
-      ||
-      dark:brightness-75 dark:contrast-125
-    "
+    class="w-1/4 h-full | lg:w-full lg:h-auto lg:overflow-auto || dark:brightness-75 dark:contrast-125"
     loading="lazy"
   />
 </div>

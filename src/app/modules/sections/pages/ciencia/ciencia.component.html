@@ -1,7 +1,9 @@
-<div class="md:container px-6 | lg:px-0 lg:grid lg:grid-cols-3 | font-serif">
+<div
+  class="flex flex-col | md:container | px-0 lg:grid lg:grid-cols-3 | font-serif"
+>
   <ng-container *ngIf="news.news.length > 0; else noNews">
     <app-headline
-      class="cursor-pointer hover:shadow-xl"
+      class="cursor-pointer hover:shadow-xl transition-all duration-300 dark:hover:bg-gray-800 px-6 lg:px-0"
       [routerLink]="['/news', headline.news_id]"
       *ngFor="let headline of news.news"
       [headline]="headline"
