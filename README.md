@@ -13,7 +13,9 @@ Fisiniús es un portal de noticias enfocado a la accesibilidad.
 ## Features
 
 - Puedes alternar entre el modo claro y oscuro.
+
   ![Modo claro](https://i.ibb.co/XL7tQkV/image.png) ![Modo oscuro](https://i.ibb.co/qncwNbM/image.png)
+
 - Puedes activar filtros daltónicos. Tienes disponible 8 tipos de daltonismo:
   - Protanopía
   - Deuteranopía
@@ -27,7 +29,9 @@ Fisiniús es un portal de noticias enfocado a la accesibilidad.
 ![Protanopía](https://i.ibb.co/hcVxd0g/image.png) ![Deuteranopía](https://i.ibb.co/02DK8xx/image.png) ![Tritanopía](https://i.ibb.co/wd5q0Qb/image.png)
 
 - Puedes activar el [lector inmersivo](https://azure.microsoft.com/es-es/services/immersive-reader/) estando en una noticia.
+
   ![Narrador inmmersivo](https://i.ibb.co/pK8YRgM/image.png)
+
 - Puedes ir a la fuente original de la noticia.
 
 ## Tech Stack
@@ -39,6 +43,7 @@ Fisiniús es un portal de noticias enfocado a la accesibilidad.
 ## Documentación
 
 Puedes ver la documentación técnica de la parte del front-end [ingresando a este link](#).
+
 <!-- Añadir la documentación del Compodoc en reemplazo de la almohadilla -->
 
 <!-- ## Autores
