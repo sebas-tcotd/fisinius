@@ -2,12 +2,11 @@
   class="
     mb-6
     transition-all
-    example-toolbar
-    dark:bg-gray-800 dark:text-gray-200
+    example-toolbar dark:text-gray-200
   "
   #cabecera
 >
-  <div class="flex items-center lg:container mx-auto md:pl-6">
+  <div class="flex items-center lg:container mx-auto md:pl-6 ">
     <a
       #mobileMenu
       class="
@@ -22,7 +21,7 @@
         |
         active:bg-gray-200
         |
-        transition
+        transition-all
         duration-200
         dark:active:bg-gray-700
       "
@@ -40,7 +39,7 @@
 
     <nav class="hidden font-serif | md:flex md:justify-around" #sections>
       <a
-        class="mx-4 cursor-pointer hover:font-bold"
+        class="mx-4 cursor-pointer hover:font-bold transition-all"
         [routerLink]="['/home']"
         routerLinkActive="border-b-2 border-black | dark:border-gray-200"
         (isActiveChange)="onRouterLinkActive($event)"
