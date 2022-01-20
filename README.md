@@ -1,27 +1,54 @@
-# Fisiniús
+![Fisiniús](src/assets/img/fisinius-logo.svg)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
+Fisiniús es un portal de noticias enfocado a la accesibilidad.
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+![Azure](https://img.shields.io/badge/microsoft%20azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ae1ced48-7543-43ee-8254-41d368913df6/deploy-status)](https://app.netlify.com/sites/fisinius/deploys)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![Menú principal](https://i.ibb.co/W2YskFP/image.png)
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Puedes alternar entre el modo claro y oscuro.
 
-## Build
+  ![Modo claro](https://i.ibb.co/XL7tQkV/image.png) ![Modo oscuro](https://i.ibb.co/qncwNbM/image.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Puedes activar filtros daltónicos. Tienes disponible 8 tipos de daltonismo:
+  - Protanopía
+  - Deuteranopía
+  - Tritanopía
+  - Acromatopcia
+  - Protanomalía
+  - Deuteranomalía
+  - Tritanomalía
+  - Acromatomalía
 
-## Running unit tests
+![Protanopía](https://i.ibb.co/hcVxd0g/image.png) ![Deuteranopía](https://i.ibb.co/02DK8xx/image.png) ![Tritanopía](https://i.ibb.co/wd5q0Qb/image.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Puedes activar el [lector inmersivo](https://azure.microsoft.com/es-es/services/immersive-reader/) estando en una noticia.
 
-## Running end-to-end tests
+  ![Narrador inmmersivo](https://i.ibb.co/pK8YRgM/image.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Puedes ir a la fuente original de la noticia.
 
-## Further help
+## Tech Stack
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Cliente:** Angular, TailwindCSS
+
+**Servidor:** Python, Flask, MongoDB
+
+## Documentación
+
+Puedes ver la documentación técnica de la parte del front-end [ingresando a este link](#).
+
+<!-- Añadir la documentación del Compodoc en reemplazo de la almohadilla -->
+
+De la misma manera, puedes visitar el repositorio del back-end [ingresando a este link](https://github.com/Maurck/fisinius).
+
+<!-- ## Autores
+- [@sebas-tcotd](https://github.com/sebas-tcotd): Front-end
+- [@maurck](https://github.com/Maurck): Back-end
+- [@MartinRC26](https://github.com/MartinRC26): Logística -->
