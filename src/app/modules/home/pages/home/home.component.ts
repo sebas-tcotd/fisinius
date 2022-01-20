@@ -20,6 +20,9 @@ export class HomeComponent implements OnInit {
 
   constructor(private newsService: NewsService) {}
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     this.receiveNews();
   }

@@ -8,7 +8,14 @@ import { environment } from 'src/environments/environment';
  * Data para las credenciales de Azure.
  */
 interface AzureReaderCredentials {
+  /**
+   * Token de acceso para el servicio de Azure.
+   */
   token: string;
+
+  /**
+   * Subdominio de Azure.
+   */
   subdomain: string;
 }
 
@@ -19,7 +26,10 @@ interface AzureReaderCredentials {
   providedIn: 'root',
 })
 export class AzureService {
+  /** @ignore */
   private _token: string = '';
+
+  /** @ignore */
   private _subdomain: string = '';
 
   constructor(private http: HttpClient) {}

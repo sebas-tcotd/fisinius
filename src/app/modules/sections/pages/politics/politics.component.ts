@@ -20,6 +20,9 @@ export class PoliticsComponent implements OnInit {
 
   constructor(private newsService: NewsService) {}
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     const quantity = 12;
     const from = Math.floor(Math.random() * (100 - quantity));

@@ -20,13 +20,17 @@ export class NewsService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
+  /** @ignore */
   private searchKeywordSource = new Subject<any>();
+
   /**
    * Observable que emite el valor de la palabra que se utiliza al momento de buscar.
    */
   searchKeyword$: Observable<News> = this.searchKeywordSource.asObservable();
 
+  /** @ignore */
   private newsIdSource = new Subject<string>();
+
   /**
    *  Observable que emite el ID de una noticia singular.
    */

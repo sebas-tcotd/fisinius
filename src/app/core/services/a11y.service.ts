@@ -7,7 +7,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class A11yService {
+  /** @ignore */
   private _narrationMode: boolean = false;
+
+  /** @ignore */
   private _narrationDesactivated: boolean = false;
 
   /**
