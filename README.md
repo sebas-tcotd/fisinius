@@ -46,6 +46,8 @@ Puedes ver la documentación técnica de la parte del front-end [ingresando a es
 
 <!-- Añadir la documentación del Compodoc en reemplazo de la almohadilla -->
 
+De la misma manera, puedes visitar el repositorio del back-end [ingresando a este link](https://github.com/Maurck/fisinius).
+
 <!-- ## Autores
 - [@sebas-tcotd](https://github.com/sebas-tcotd): Front-end
 - [@maurck](https://github.com/Maurck): Back-end -->
