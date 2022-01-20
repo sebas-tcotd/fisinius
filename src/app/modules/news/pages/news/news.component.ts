@@ -27,6 +27,9 @@ export class NewsComponent implements OnInit {
     });
   }
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {
     this.newsService
       .getNewsById(this.newsID)
