@@ -1,0 +1,1387 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>fisinius documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">fisinius documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li
+  >
+  HeaderComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/components/header/header.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>shared-header</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./header.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#elementsWithRouterLinkActive" >elementsWithRouterLinkActive</a>
+                            </li>
+                            <li>
+                                <a href="#isSearchOpen" >isSearchOpen</a>
+                            </li>
+                            <li>
+                                <a href="#isSomeSectionActive" >isSomeSectionActive</a>
+                            </li>
+                            <li>
+                                <a href="#sectionsElements" >sectionsElements</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onRouterLinkActive" >onRouterLinkActive</a>
+                            </li>
+                            <li>
+                                <a href="#onSearchInput" >onSearchInput</a>
+                            </li>
+                            <li>
+                                <a href="#receiveModalStatus" >receiveModalStatus</a>
+                            </li>
+                            <li>
+                                <a href="#replaceItemsWithSearchInput" >replaceItemsWithSearchInput</a>
+                            </li>
+                            <li>
+                                <a href="#replaceSearchInputWithItems" >replaceSearchInputWithItems</a>
+                            </li>
+                            <li>
+                                <a href="#toggleModal" >toggleModal</a>
+                            </li>
+                            <li>
+                                <a href="#toggleSearch" >toggleSearch</a>
+                            </li>
+                            <li>
+                                <a href="#toggleSidebar" >toggleSidebar</a>
+                            </li>
+                            <li>
+                                <a href="#whoIsTheActive" >whoIsTheActive</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Entradas</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isModalActive" >isModalActive</a>
+                            </li>
+                            <li>
+                                <a href="#isSidebarOpen" >isSidebarOpen</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Salidas</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#modalStatusEmitter" >modalStatusEmitter</a>
+                            </li>
+                            <li>
+                                <a href="#openSignEmitter" >openSignEmitter</a>
+                            </li>
+                            <li>
+                                <a href="#searchWordEmitter" >searchWordEmitter</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, news: <a href="../injectables/NewsService.html" target="_self">NewsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="30" class="link-to-prism">src/app/shared/components/header/header.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>news</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NewsService.html" target="_self" >NewsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Entradas</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isModalActive"></a>
+                        <b>isModalActive</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="30" class="link-to-prism">src/app/shared/components/header/header.component.ts:30</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isSidebarOpen"></a>
+                        <b>isSidebarOpen</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="21" class="link-to-prism">src/app/shared/components/header/header.component.ts:21</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Salidas</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="modalStatusEmitter"></a>
+                        <b>modalStatusEmitter</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>EventEmitter&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="23" class="link-to-prism">src/app/shared/components/header/header.component.ts:23</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="openSignEmitter"></a>
+                        <b>openSignEmitter</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>EventEmitter&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="22" class="link-to-prism">src/app/shared/components/header/header.component.ts:22</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchWordEmitter"></a>
+                        <b>searchWordEmitter</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>EventEmitter&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="24" class="link-to-prism">src/app/shared/components/header/header.component.ts:24</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onRouterLinkActive"></a>
+                    <span class="name">
+                        <span ><b>onRouterLinkActive</b></span>
+                        <a href="#onRouterLinkActive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onRouterLinkActive(event: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="85"
+                            class="link-to-prism">src/app/shared/components/header/header.component.ts:85</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSearchInput"></a>
+                    <span class="name">
+                        <span ><b>onSearchInput</b></span>
+                        <a href="#onSearchInput"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSearchInput(event: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="96"
+                            class="link-to-prism">src/app/shared/components/header/header.component.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="receiveModalStatus"></a>
+                    <span class="name">
+                        <span ><b>receiveModalStatus</b></span>
+                        <a href="#receiveModalStatus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>receiveModalStatus(event: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="107"
+                            class="link-to-prism">src/app/shared/components/header/header.component.ts:107</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="replaceItemsWithSearchInput"></a>
+                    <span class="name">
+                        <span ><b>replaceItemsWithSearchInput</b></span>
+                        <a href="#replaceItemsWithSearchInput"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>replaceItemsWithSearchInput(retain?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="39"
+                            class="link-to-prism">src/app/shared/components/header/header.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>retain</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Si
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="replaceSearchInputWithItems"></a>
+                    <span class="name">
+                        <span ><b>replaceSearchInputWithItems</b></span>
+                        <a href="#replaceSearchInputWithItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>replaceSearchInputWithItems()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="60"
+                            class="link-to-prism">src/app/shared/components/header/header.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleModal"></a>
+                    <span class="name">
+                        <span ><b>toggleModal</b></span>
+                        <a href="#toggleModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="103"
+                            class="link-to-prism">src/app/shared/components/header/header.component.ts:103</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleSearch"></a>
+                    <span class="name">
+                        <span ><b>toggleSearch</b></span>
+                        <a href="#toggleSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleSearch()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="64"
+                            class="link-to-prism">src/app/shared/components/header/header.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleSidebar"></a>
+                    <span class="name">
+                        <span ><b>toggleSidebar</b></span>
+                        <a href="#toggleSidebar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleSidebar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="34"
+                            class="link-to-prism">src/app/shared/components/header/header.component.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="whoIsTheActive"></a>
+                    <span class="name">
+                        <span ><b>whoIsTheActive</b></span>
+                        <a href="#whoIsTheActive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>whoIsTheActive()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="74"
+                            class="link-to-prism">src/app/shared/components/header/header.component.ts:74</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Propiedades
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="elementsWithRouterLinkActive"></a>
+                    <span class="name">
+                        <span ><b>elementsWithRouterLinkActive</b></span>
+                        <a href="#elementsWithRouterLinkActive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>QueryList&lt;ElementRef&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decoradores : </b>
+                        <br />
+                        <code>
+                            @ViewChildren(RouterLinkActive, {read: ElementRef})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="26" class="link-to-prism">src/app/shared/components/header/header.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSearchOpen"></a>
+                    <span class="name">
+                        <span ><b>isSearchOpen</b></span>
+                        <a href="#isSearchOpen"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="29" class="link-to-prism">src/app/shared/components/header/header.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSomeSectionActive"></a>
+                    <span class="name">
+                        <span ><b>isSomeSectionActive</b></span>
+                        <a href="#isSomeSectionActive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="28" class="link-to-prism">src/app/shared/components/header/header.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sectionsElements"></a>
+                    <span class="name">
+                        <span ><b>sectionsElements</b></span>
+                        <a href="#sectionsElements"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="27" class="link-to-prism">src/app/shared/components/header/header.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  Output,
+  QueryList,
+  ViewChildren,
+} from &#x27;@angular/core&#x27;;
+import { Router, RouterLinkActive } from &#x27;@angular/router&#x27;;
+import { NewsService } from &#x27;src/app/core/services/news.service&#x27;;
+
+@Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
+  selector: &#x27;shared-header&#x27;,
+  templateUrl: &#x27;./header.component.html&#x27;,
+  styleUrls: [],
+})
+export class HeaderComponent {
+  @Input() isSidebarOpen: boolean &#x3D; false;
+  @Output() openSignEmitter: EventEmitter&lt;boolean&gt; &#x3D; new EventEmitter();
+  @Output() modalStatusEmitter: EventEmitter&lt;boolean&gt; &#x3D; new EventEmitter();
+  @Output() searchWordEmitter: EventEmitter&lt;string&gt; &#x3D; new EventEmitter();
+  @ViewChildren(RouterLinkActive, { read: ElementRef })
+  elementsWithRouterLinkActive!: QueryList&lt;ElementRef&gt;;
+  sectionsElements: any[] &#x3D; [];
+  isSomeSectionActive: boolean &#x3D; false;
+  isSearchOpen: boolean &#x3D; false;
+  @Input() isModalActive: boolean &#x3D; false;
+
+  constructor(private router: Router, private news: NewsService) {}
+
+  toggleSidebar(): void {
+    this.isSidebarOpen &#x3D; true;
+    this.openSignEmitter.emit(this.isSidebarOpen);
+  }
+
+  replaceItemsWithSearchInput(retain?: any): void {
+    // Agarra todos los elementos que contengan la directiva routerLinkActive
+    // y los junta en un array
+    this.sectionsElements &#x3D; this.elementsWithRouterLinkActive
+      .toArray()
+      .map((e) &#x3D;&gt; e.nativeElement);
+
+    // Se consigue el index del elemento el cual contiene el routerLinkActive
+    // activado, detectándolo por la clase que utiliza en ese estado
+    const activeIndex &#x3D; this.sectionsElements.findIndex((e) &#x3D;&gt;
+      e.classList.contains(&#x27;border-b-2&#x27;)
+    );
+
+    if (activeIndex &gt;&#x3D; 0) {
+      // Se elimina ese elemento del array
+      this.sectionsElements.splice(activeIndex, 1);
+    }
+
+    // A los elementos restantes se les agrega la clase &#x27;hidden&#x27;
+    this.sectionsElements.forEach((e) &#x3D;&gt; e.classList.add(&#x27;hidden&#x27;));
+  }
+  replaceSearchInputWithItems(): void {
+    // Se remueve la clase &#x27;hidden&#x27; a cada uno de los elementos
+    this.sectionsElements.forEach((e) &#x3D;&gt; e.classList.remove(&#x27;hidden&#x27;));
+  }
+  toggleSearch(): void {
+    this.isSearchOpen &#x3D; !this.isSearchOpen;
+
+    if (this.isSearchOpen) {
+      this.replaceItemsWithSearchInput();
+    } else {
+      this.replaceSearchInputWithItems();
+    }
+  }
+
+  whoIsTheActive() {
+    this.sectionsElements &#x3D; this.elementsWithRouterLinkActive
+      .toArray()
+      .map((e) &#x3D;&gt; e.nativeElement);
+
+    const activeIndex &#x3D; this.sectionsElements.find((e) &#x3D;&gt;
+      e.classList.contains(&#x27;border-b-2&#x27;)
+    );
+
+    return activeIndex;
+  }
+  onRouterLinkActive(event: boolean): void {
+    this.isSomeSectionActive &#x3D; event;
+
+    if (this.isSearchOpen &amp;&amp; !this.isSomeSectionActive) {
+      this.replaceItemsWithSearchInput();
+    } else if (this.isSearchOpen &amp;&amp; this.isSomeSectionActive) {
+      const active &#x3D; this.whoIsTheActive();
+      active.classList.remove(&#x27;hidden&#x27;);
+    }
+  }
+
+  onSearchInput(event: string) {
+    if (event) {
+      this.router.navigateByUrl(&#x27;/search&#x27;);
+    }
+    this.news.searchNews(event).subscribe();
+  }
+
+  toggleModal() {
+    this.isModalActive &#x3D; !this.isModalActive;
+    this.modalStatusEmitter.emit(this.isModalActive);
+  }
+  receiveModalStatus(event: boolean) {
+    this.isModalActive &#x3D; event;
+    this.modalStatusEmitter.emit(this.isModalActive);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;header
+  class&#x3D;&quot;
+    mb-6
+    transition-all
+    example-toolbar dark:text-gray-200
+  &quot;
+  #cabecera
+&gt;
+  &lt;div class&#x3D;&quot;flex items-center lg:container mx-auto md:pl-6 &quot;&gt;
+    &lt;a
+      #mobileMenu
+      class&#x3D;&quot;
+        flex-none flex
+        items-center
+        justify-center
+        |
+        w-16
+        h-16
+        |
+        md:hidden
+        |
+        active:bg-gray-200
+        |
+        transition-all
+        duration-200
+        dark:active:bg-gray-700
+      &quot;
+      (click)&#x3D;&quot;toggleSidebar()&quot;
+    &gt;
+      &lt;span class&#x3D;&quot;material-icons&quot;&gt;menu&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;a
+      class&#x3D;&quot;flex-grow text-center font-serif | md:text-left md:text-3xl&quot;
+      [routerLink]&#x3D;&quot;[&#x27;/home&#x27;]&quot;
+      [ngClass]&#x3D;&quot;{ &#x27;md:block&#x27;: isSearchOpen, hidden: isSearchOpen }&quot;
+      &gt;Fisiniús&lt;/a
+    &gt;
+
+    &lt;nav class&#x3D;&quot;hidden font-serif | md:flex md:justify-around&quot; #sections&gt;
+      &lt;a
+        class&#x3D;&quot;mx-4 cursor-pointer hover:font-bold transition-all&quot;
+        [routerLink]&#x3D;&quot;[&#x27;/home&#x27;]&quot;
+        routerLinkActive&#x3D;&quot;border-b-2 border-black | dark:border-gray-200&quot;
+        (isActiveChange)&#x3D;&quot;onRouterLinkActive($event)&quot;
+        &gt;Inicio&lt;/a
+      &gt;
+      &lt;a
+        class&#x3D;&quot;mx-4 cursor-pointer hover:font-bold&quot;
+        routerLink&#x3D;&quot;/section/politica&quot;
+        routerLinkActive&#x3D;&quot;border-b-2 border-black | dark:border-gray-200&quot;
+        (isActiveChange)&#x3D;&quot;onRouterLinkActive($event)&quot;
+        &gt;Política&lt;/a
+      &gt;
+      &lt;a
+        class&#x3D;&quot;mx-4 cursor-pointer hover:font-bold&quot;
+        routerLink&#x3D;&quot;/section/salud&quot;
+        routerLinkActive&#x3D;&quot;border-b-2 border-black | dark:border-gray-200&quot;
+        (isActiveChange)&#x3D;&quot;onRouterLinkActive($event)&quot;
+        &gt;Salud&lt;/a
+      &gt;
+      &lt;a
+        class&#x3D;&quot;mx-4 cursor-pointer hover:font-bold&quot;
+        routerLink&#x3D;&quot;/section/deporte&quot;
+        routerLinkActive&#x3D;&quot;border-b-2 border-black | dark:border-gray-200&quot;
+        (isActiveChange)&#x3D;&quot;onRouterLinkActive($event)&quot;
+        &gt;Deportes&lt;/a
+      &gt;
+      &lt;a
+        class&#x3D;&quot;mx-4 cursor-pointer hover:font-bold&quot;
+        routerLink&#x3D;&quot;/section/ciencia&quot;
+        routerLinkActive&#x3D;&quot;border-b-2 border-black | dark:border-gray-200&quot;
+        (isActiveChange)&#x3D;&quot;onRouterLinkActive($event)&quot;
+        &gt;Ciencias&lt;/a
+      &gt;
+    &lt;/nav&gt;
+
+    &lt;input
+      #searchInput
+      type&#x3D;&quot;search&quot;
+      placeholder&#x3D;&quot;Busca una noticia&quot;
+      class&#x3D;&quot;
+        w-full
+        mx-1
+        px-2
+        py-1
+        border-2 border-black
+        focus:outline-black
+        |
+        hidden
+        |
+        font-sansSerif
+        |
+        md:w-72
+        ||
+        dark:border-gray-200 dark:bg-gray-800 dark:focus:outline-white
+      &quot;
+      [ngClass]&#x3D;&quot;{ hidden: !isSearchOpen }&quot;
+      value&#x3D;&quot;&quot;
+      (keyup.enter)&#x3D;&quot;onSearchInput(searchInput.value)&quot;
+    /&gt;
+
+    &lt;button
+      class&#x3D;&quot;
+        flex-none flex
+        items-center
+        justify-center
+        |
+        w-16
+        h-16
+        |
+        active:bg-gray-200
+        |
+        transition
+        duration-200
+        ||
+        dark:active:bg-gray-700
+      &quot;
+      (click)&#x3D;&quot;toggleSearch()&quot;
+      title&#x3D;&quot;Buscar&quot;
+    &gt;
+      &lt;span class&#x3D;&quot;material-icons&quot;&gt;search&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button
+      class&#x3D;&quot;
+        flex-none
+        |
+        w-16
+        h-16
+        |
+        hidden
+        md:block
+        |
+        active:bg-gray-200
+        |
+        transition
+        duration-200
+      &quot;
+      (click)&#x3D;&quot;toggleModal()&quot;
+      title&#x3D;&quot;Abrir panel de accesibilidad&quot;
+    &gt;
+      &lt;span class&#x3D;&quot;material-icons&quot;&gt;settings_accessibility&lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;app-a11y-modal
+      [isModalActive]&#x3D;&quot;isModalActive&quot;
+      (modalStatusEmitter)&#x3D;&quot;receiveModalStatus($event)&quot;
+    &gt;&lt;/app-a11y-modal&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><header  class="    mb-6    transition-all    example-toolbar dark:text-gray-200  "  #cabecera>  <div class="flex items-center lg:container mx-auto md:pl-6 ">    <a      #mobileMenu      class="        flex-none flex        items-center        justify-center        |        w-16        h-16        |        md:hidden        |        active:bg-gray-200        |        transition-all        duration-200        dark:active:bg-gray-700      "      (click)="toggleSidebar()"    >      <span class="material-icons">menu</span>    </a>    <a      class="flex-grow text-center font-serif | md:text-left md:text-3xl"      [routerLink]="[\'/home\']"      [ngClass]="{ \'md:block\': isSearchOpen, hidden: isSearchOpen }"      >Fisiniús</a    >    <nav class="hidden font-serif | md:flex md:justify-around" #sections>      <a        class="mx-4 cursor-pointer hover:font-bold transition-all"        [routerLink]="[\'/home\']"        routerLinkActive="border-b-2 border-black | dark:border-gray-200"        (isActiveChange)="onRouterLinkActive($event)"        >Inicio</a      >      <a        class="mx-4 cursor-pointer hover:font-bold"        routerLink="/section/politica"        routerLinkActive="border-b-2 border-black | dark:border-gray-200"        (isActiveChange)="onRouterLinkActive($event)"        >Política</a      >      <a        class="mx-4 cursor-pointer hover:font-bold"        routerLink="/section/salud"        routerLinkActive="border-b-2 border-black | dark:border-gray-200"        (isActiveChange)="onRouterLinkActive($event)"        >Salud</a      >      <a        class="mx-4 cursor-pointer hover:font-bold"        routerLink="/section/deporte"        routerLinkActive="border-b-2 border-black | dark:border-gray-200"        (isActiveChange)="onRouterLinkActive($event)"        >Deportes</a      >      <a        class="mx-4 cursor-pointer hover:font-bold"        routerLink="/section/ciencia"        routerLinkActive="border-b-2 border-black | dark:border-gray-200"        (isActiveChange)="onRouterLinkActive($event)"        >Ciencias</a      >    </nav>    <input      #searchInput      type="search"      placeholder="Busca una noticia"      class="        w-full        mx-1        px-2        py-1        border-2 border-black        focus:outline-black        |        hidden        |        font-sansSerif        |        md:w-72        ||        dark:border-gray-200 dark:bg-gray-800 dark:focus:outline-white      "      [ngClass]="{ hidden: !isSearchOpen }"      value=""      (keyup.enter)="onSearchInput(searchInput.value)"    />    <button      class="        flex-none flex        items-center        justify-center        |        w-16        h-16        |        active:bg-gray-200        |        transition        duration-200        ||        dark:active:bg-gray-700      "      (click)="toggleSearch()"      title="Buscar"    >      <span class="material-icons">search</span>    </button>    <button      class="        flex-none        |        w-16        h-16        |        hidden        md:block        |        active:bg-gray-200        |        transition        duration-200      "      (click)="toggleModal()"      title="Abrir panel de accesibilidad"    >      <span class="material-icons">settings_accessibility</span>    </button>    <app-a11y-modal      [isModalActive]="isModalActive"      (modalStatusEmitter)="receiveModalStatus($event)"    ></app-a11y-modal>  </div></header></div>'
+    var COMPONENTS = [{'name': 'A11yFormComponent', 'selector': 'app-a11y-form'},{'name': 'A11yModalComponent', 'selector': 'app-a11y-modal'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CienciaComponent', 'selector': 'app-ciencia'},{'name': 'DeporteComponent', 'selector': 'app-deporte'},{'name': 'FooterComponent', 'selector': 'shared-footer'},{'name': 'HeaderComponent', 'selector': 'shared-header'},{'name': 'HeadlineComponent', 'selector': 'app-headline'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoadingComponent', 'selector': 'shared-loading'},{'name': 'NewsBodyComponent', 'selector': 'app-news-body'},{'name': 'NewsComponent', 'selector': 'app-news'},{'name': 'NewsDataComponent', 'selector': 'app-news-data'},{'name': 'PoliticsComponent', 'selector': 'app-politics'},{'name': 'SaludComponent', 'selector': 'app-salud'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SectionsComponent', 'selector': 'app-sections'},{'name': 'SidebarComponent', 'selector': 'shared-sidebar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HeaderComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

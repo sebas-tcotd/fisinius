@@ -1,0 +1,712 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>fisinius documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">fisinius documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li
+  >
+  SearchComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/modules/search/pages/search/search.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-search</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./search.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#headlines" >headlines</a>
+                            </li>
+                            <li>
+                                <a href="#isPageLoading" >isPageLoading</a>
+                            </li>
+                            <li>
+                                <a href="#subscription" >subscription</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getResultsFromSearch" >getResultsFromSearch</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#waitForNews" >waitForNews</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(newsService: <a href="../injectables/NewsService.html" target="_self">NewsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="20" class="link-to-prism">src/app/modules/search/pages/search/search.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>newsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NewsService.html" target="_self" >NewsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getResultsFromSearch"></a>
+                    <span class="name">
+                        <span ><b>getResultsFromSearch</b></span>
+                        <a href="#getResultsFromSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getResultsFromSearch()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="37"
+                            class="link-to-prism">src/app/modules/search/pages/search/search.component.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="46"
+                            class="link-to-prism">src/app/modules/search/pages/search/search.component.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="24"
+                            class="link-to-prism">src/app/modules/search/pages/search/search.component.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="waitForNews"></a>
+                    <span class="name">
+                        <span ><b>waitForNews</b></span>
+                        <a href="#waitForNews"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>waitForNews()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="28"
+                            class="link-to-prism">src/app/modules/search/pages/search/search.component.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Propiedades
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="headlines"></a>
+                    <span class="name">
+                        <span ><b>headlines</b></span>
+                        <a href="#headlines"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>NewsElement[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="19" class="link-to-prism">src/app/modules/search/pages/search/search.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isPageLoading"></a>
+                    <span class="name">
+                        <span ><b>isPageLoading</b></span>
+                        <a href="#isPageLoading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="18" class="link-to-prism">src/app/modules/search/pages/search/search.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subscription"></a>
+                    <span class="name">
+                        <span ><b>subscription</b></span>
+                        <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="20" class="link-to-prism">src/app/modules/search/pages/search/search.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  SimpleChanges,
+} from &#x27;@angular/core&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { NewsService } from &#x27;src/app/core/services/news.service&#x27;;
+import { NewsElement } from &#x27;../../../../core/interfaces/news.interfaces&#x27;;
+
+@Component({
+  selector: &#x27;app-search&#x27;,
+  templateUrl: &#x27;./search.component.html&#x27;,
+  styleUrls: [],
+})
+export class SearchComponent implements OnInit, OnDestroy {
+  isPageLoading: boolean &#x3D; true;
+  headlines: NewsElement[] &#x3D; [];
+  subscription!: Subscription;
+
+  constructor(private newsService: NewsService) {}
+
+  ngOnInit(): void {
+    this.waitForNews();
+  }
+
+  waitForNews() {
+    this.isPageLoading &#x3D; true;
+    this.getResultsFromSearch();
+
+    setTimeout(() &#x3D;&gt; {
+      this.isPageLoading &#x3D; false;
+    }, 4000);
+  }
+
+  getResultsFromSearch() {
+    this.subscription &#x3D; this.newsService.searchKeyword$.subscribe((res) &#x3D;&gt; {
+      console.log(res);
+
+      this.isPageLoading &#x3D; false;
+      this.headlines &#x3D; res.news;
+    });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container mx-auto px-6&quot;&gt;
+  &lt;main class&#x3D;&quot;font-serif&quot;&gt;
+    &lt;h1
+      class&#x3D;&quot;font-bold text-2xl px-6 | lg:px-0 || dark:text-gray-200&quot;
+      [ngClass]&#x3D;&quot;{ hidden: !isPageLoading }&quot;
+    &gt;
+      Resultados de búsqueda
+    &lt;/h1&gt;
+
+    &lt;div class&#x3D;&quot;md:container px-6 | lg:px-0 lg:grid lg:grid-cols-3&quot;&gt;
+      &lt;shared-loading *ngIf&#x3D;&quot;isPageLoading; else notLoading&quot;&gt;&lt;/shared-loading&gt;
+
+      &lt;ng-template #notLoading&gt;
+        &lt;div
+          *ngIf&#x3D;&quot;headlines &amp;&amp; headlines.length &gt; 0; then news; else noNews&quot;
+        &gt;&lt;/div&gt;
+
+        &lt;ng-template #news&gt;
+          &lt;app-headline
+            class&#x3D;&quot;cursor-pointer hover:shadow-xl&quot;
+            [routerLink]&#x3D;&quot;[&#x27;/news&#x27;, headline.news_id]&quot;
+            *ngFor&#x3D;&quot;let headline of headlines&quot;
+            [headline]&#x3D;&quot;headline&quot;
+          &gt;&lt;/app-headline&gt;
+        &lt;/ng-template&gt;
+
+        &lt;ng-template #noNews&gt;
+          &lt;div
+            class&#x3D;&quot;
+              my-[50%]
+              py-4
+              flex flex-col
+              items-center
+              space-y-2
+              border-black border-2
+              |
+              md:max-w-md md:mx-auto
+              lg:my-10
+              ||
+              dark:border-gray-200
+            &quot;
+          &gt;
+            &lt;p class&#x3D;&quot;font-serif text-lg dark:text-gray-200&quot;&gt;Sin noticias&lt;/p&gt;
+            &lt;div class&#x3D;&quot;px-4 text-center&quot;&gt;
+              &lt;p class&#x3D;&quot;font-sansSerif text-base mb-2 dark:text-gray-200&quot;&gt;
+                No hay noticias que coincida con su búsqueda
+              &lt;/p&gt;
+
+              &lt;p
+                class&#x3D;&quot;
+                  font-sansSerif
+                  text-xs
+                  leading-none
+                  mb-6
+                  dark:text-gray-400
+                &quot;
+              &gt;
+                O bien ingresaste acá directamente sin haber buscado.
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;span class&#x3D;&quot;material-icons text-6xl dark:text-gray-200&quot;&gt;
+              error
+            &lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+      &lt;/ng-template&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container mx-auto px-6">  <main class="font-serif">    <h1      class="font-bold text-2xl px-6 | lg:px-0 || dark:text-gray-200"      [ngClass]="{ hidden: !isPageLoading }"    >      Resultados de búsqueda    </h1>    <div class="md:container px-6 | lg:px-0 lg:grid lg:grid-cols-3">      <shared-loading *ngIf="isPageLoading; else notLoading"></shared-loading>      <ng-template #notLoading>        <div          *ngIf="headlines && headlines.length > 0; then news; else noNews"        ></div>        <ng-template #news>          <app-headline            class="cursor-pointer hover:shadow-xl"            [routerLink]="[\'/news\', headline.news_id]"            *ngFor="let headline of headlines"            [headline]="headline"          ></app-headline>        </ng-template>        <ng-template #noNews>          <div            class="              my-[50%]              py-4              flex flex-col              items-center              space-y-2              border-black border-2              |              md:max-w-md md:mx-auto              lg:my-10              ||              dark:border-gray-200            "          >            <p class="font-serif text-lg dark:text-gray-200">Sin noticias</p>            <div class="px-4 text-center">              <p class="font-sansSerif text-base mb-2 dark:text-gray-200">                No hay noticias que coincida con su búsqueda              </p>              <p                class="                  font-sansSerif                  text-xs                  leading-none                  mb-6                  dark:text-gray-400                "              >                O bien ingresaste acá directamente sin haber buscado.              </p>            </div>            <span class="material-icons text-6xl dark:text-gray-200">              error            </span>          </div>        </ng-template>      </ng-template>    </div>  </main></div></div>'
+    var COMPONENTS = [{'name': 'A11yFormComponent', 'selector': 'app-a11y-form'},{'name': 'A11yModalComponent', 'selector': 'app-a11y-modal'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CienciaComponent', 'selector': 'app-ciencia'},{'name': 'DeporteComponent', 'selector': 'app-deporte'},{'name': 'FooterComponent', 'selector': 'shared-footer'},{'name': 'HeaderComponent', 'selector': 'shared-header'},{'name': 'HeadlineComponent', 'selector': 'app-headline'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoadingComponent', 'selector': 'shared-loading'},{'name': 'NewsBodyComponent', 'selector': 'app-news-body'},{'name': 'NewsComponent', 'selector': 'app-news'},{'name': 'NewsDataComponent', 'selector': 'app-news-data'},{'name': 'PoliticsComponent', 'selector': 'app-politics'},{'name': 'SaludComponent', 'selector': 'app-salud'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SectionsComponent', 'selector': 'app-sections'},{'name': 'SidebarComponent', 'selector': 'shared-sidebar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SearchComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SearchComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

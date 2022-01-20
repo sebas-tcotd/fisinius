@@ -1,0 +1,347 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>fisinius documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">fisinius documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li
+  >
+  HeadlineComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/components/headline/headline.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-headline</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./headline.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Entradas</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#headline" >headline</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="10" class="link-to-prism">src/app/shared/components/headline/headline.component.ts:10</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Entradas</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="headline"></a>
+                        <b>headline</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="../interfaces/NewsElement.html" target="_self" >NewsElement</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="10" class="link-to-prism">src/app/shared/components/headline/headline.component.ts:10</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
+import { NewsElement } from &#x27;src/app/core/interfaces/news.interfaces&#x27;;
+
+@Component({
+  selector: &#x27;app-headline&#x27;,
+  templateUrl: &#x27;./headline.component.html&#x27;,
+  styleUrls: [],
+})
+export class HeadlineComponent {
+  @Input() headline!: NewsElement;
+
+  constructor() {}
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div
+  class&#x3D;&quot;flex justify-between my-8 items-center | lg:flex-col-reverse lg:items-start lg:p-4&quot;
+&gt;
+  &lt;!-- News data --&gt;
+  &lt;div class&#x3D;&quot;flex flex-col w-3/4 mr-4 | lg:mr-0 lg:mt-4&quot;&gt;
+    &lt;span
+      class&#x3D;&quot;uppercase text-gray-700 text-xs tracking-widest || dark:text-gray-300&quot;
+    &gt;
+      {{ headline.category }}
+    &lt;/span&gt;
+    &lt;h3 class&#x3D;&quot;text-lg | dark:text-gray-200&quot; [title]&#x3D;&quot;headline.title&quot;&gt;
+      {{
+        headline.title.length &gt;&#x3D; 60
+          ? headline.title.slice(0, 60).trim() + &quot;...&quot;
+          : headline.title
+      }}
+    &lt;/h3&gt;
+    &lt;p class&#x3D;&quot;text-gray-500 text-xs&quot;&gt;
+      {{ headline.abstract | slice: 0:100 }}...
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;!-- News image --&gt;
+  &lt;img
+    [src]&#x3D;&quot;headline.image_url | imgNews | async&quot;
+    [alt]&#x3D;&quot;&#x27;Imagen de la noticia de&#x27; + headline.category&quot;
+    class&#x3D;&quot;w-1/4 h-full | lg:w-full lg:h-auto lg:overflow-auto || dark:brightness-75 dark:contrast-125&quot;
+    loading&#x3D;&quot;lazy&quot;
+  /&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div  class="flex justify-between my-8 items-center | lg:flex-col-reverse lg:items-start lg:p-4">  <!-- News data -->  <div class="flex flex-col w-3/4 mr-4 | lg:mr-0 lg:mt-4">    <span      class="uppercase text-gray-700 text-xs tracking-widest || dark:text-gray-300"    >      {{ headline.category }}    </span>    <h3 class="text-lg | dark:text-gray-200" [title]="headline.title">      {{        headline.title.length >= 60          ? headline.title.slice(0, 60).trim() + "..."          : headline.title      }}    </h3>    <p class="text-gray-500 text-xs">      {{ headline.abstract | slice: 0:100 }}...    </p>  </div>  <!-- News image -->  <img    [src]="headline.image_url | imgNews | async"    [alt]="\'Imagen de la noticia de\' + headline.category"    class="w-1/4 h-full | lg:w-full lg:h-auto lg:overflow-auto || dark:brightness-75 dark:contrast-125"    loading="lazy"  /></div></div>'
+    var COMPONENTS = [{'name': 'A11yFormComponent', 'selector': 'app-a11y-form'},{'name': 'A11yModalComponent', 'selector': 'app-a11y-modal'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CienciaComponent', 'selector': 'app-ciencia'},{'name': 'DeporteComponent', 'selector': 'app-deporte'},{'name': 'FooterComponent', 'selector': 'shared-footer'},{'name': 'HeaderComponent', 'selector': 'shared-header'},{'name': 'HeadlineComponent', 'selector': 'app-headline'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoadingComponent', 'selector': 'shared-loading'},{'name': 'NewsBodyComponent', 'selector': 'app-news-body'},{'name': 'NewsComponent', 'selector': 'app-news'},{'name': 'NewsDataComponent', 'selector': 'app-news-data'},{'name': 'PoliticsComponent', 'selector': 'app-politics'},{'name': 'SaludComponent', 'selector': 'app-salud'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SectionsComponent', 'selector': 'app-sections'},{'name': 'SidebarComponent', 'selector': 'shared-sidebar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HeadlineComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HeadlineComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,681 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>fisinius documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">fisinius documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li
+  >
+  SidebarComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>src/app/shared/components/sidebar/sidebar.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>shared-sidebar</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./sidebar.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#closeSidebar" >closeSidebar</a>
+                            </li>
+                            <li>
+                                <a href="#toggleA11yModal" >toggleA11yModal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Entradas</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isModalActive" >isModalActive</a>
+                            </li>
+                            <li>
+                                <a href="#isSidebarOpen" >isSidebarOpen</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Salidas</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#closeModalEmitter" >closeModalEmitter</a>
+                            </li>
+                            <li>
+                                <a href="#closeSignEmitter" >closeSignEmitter</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="13" class="link-to-prism">src/app/shared/components/sidebar/sidebar.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Entradas</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isModalActive"></a>
+                        <b>isModalActive</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="13" class="link-to-prism">src/app/shared/components/sidebar/sidebar.component.ts:13</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isSidebarOpen"></a>
+                        <b>isSidebarOpen</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="12" class="link-to-prism">src/app/shared/components/sidebar/sidebar.component.ts:12</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Salidas</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="closeModalEmitter"></a>
+                        <b>closeModalEmitter</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>EventEmitter&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="11" class="link-to-prism">src/app/shared/components/sidebar/sidebar.component.ts:11</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="closeSignEmitter"></a>
+                        <b>closeSignEmitter</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>EventEmitter&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="10" class="link-to-prism">src/app/shared/components/sidebar/sidebar.component.ts:10</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeSidebar"></a>
+                    <span class="name">
+                        <span ><b>closeSidebar</b></span>
+                        <a href="#closeSidebar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeSidebar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="27"
+                            class="link-to-prism">src/app/shared/components/sidebar/sidebar.component.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Envía la señal de cierre del sidebar (isSidebarOpen: false)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleA11yModal"></a>
+                    <span class="name">
+                        <span ><b>toggleA11yModal</b></span>
+                        <a href="#toggleA11yModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleA11yModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="17"
+                            class="link-to-prism">src/app/shared/components/sidebar/sidebar.component.ts:17</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Input, Output } from &#x27;@angular/core&#x27;;
+
+@Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
+  selector: &#x27;shared-sidebar&#x27;,
+  templateUrl: &#x27;./sidebar.component.html&#x27;,
+  styleUrls: [],
+})
+export class SidebarComponent {
+  @Output() closeSignEmitter: EventEmitter&lt;boolean&gt; &#x3D; new EventEmitter();
+  @Output() closeModalEmitter: EventEmitter&lt;boolean&gt; &#x3D; new EventEmitter();
+  @Input() isSidebarOpen: boolean &#x3D; false;
+  @Input() isModalActive!: boolean;
+
+  constructor() {}
+
+  toggleA11yModal() {
+    this.isModalActive &#x3D; !this.isModalActive;
+    this.closeModalEmitter.emit(this.isModalActive);
+
+    this.closeSidebar();
+  }
+
+  /**
+   * Envía la señal de cierre del sidebar (isSidebarOpen: false)
+   */
+  closeSidebar() {
+    this.isSidebarOpen &#x3D; false;
+    this.closeSignEmitter.emit(this.isSidebarOpen);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- Cuando se haga toggle, activar esta clase: translate-x-0 --&gt;
+&lt;!-- Mientras se esté en desarrollo, borrar esta clase: -translate-x-full --&gt;
+&lt;div
+  class&#x3D;&quot;
+    md:hidden
+    |
+    backdrop-filter backdrop-blur-md
+    bg-gray-200 bg-opacity-75
+    |
+    w-64
+    space-y-6
+    py-7
+    px-2
+    |
+    inset-y-0
+    left-0
+    overflow-y-auto
+    z-10
+    |
+    shadow-lg
+    fixed
+    |
+    transform
+    md:relative
+    transition
+    duration-200
+    ease-in-out
+    ||
+    dark:bg-gray-800 dark:bg-opacity-70 dark:text-gray-200
+  &quot;
+  [class.-translate-x-full]&#x3D;&quot;!isSidebarOpen&quot;
+&gt;
+  &lt;!-- logo --&gt;
+  &lt;div class&#x3D;&quot;flex items-center justify-between px-4&quot;&gt;
+    &lt;a routerLink&#x3D;&quot;/home&quot;&gt;
+      &lt;span class&#x3D;&quot;text-2xl font-serif&quot;&gt;Fisiniús&lt;/span&gt;
+    &lt;/a&gt;
+
+    &lt;a class&#x3D;&quot;flex items-center justify-center&quot; (click)&#x3D;&quot;closeSidebar()&quot;&gt;
+      &lt;span class&#x3D;&quot;material-icons&quot;&gt; close &lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;!-- nav --&gt;
+  &lt;nav&gt;
+    &lt;a
+      routerLink&#x3D;&quot;/home&quot;
+      routerLinkActive&#x3D;&quot;border-l-4 border-black | dark:border-gray-200&quot;
+      class&#x3D;&quot;
+        block
+        py-2.5
+        px-4
+        font-serif
+        transition
+        duration-200
+        hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
+      &quot;
+      (mouseup)&#x3D;&quot;closeSidebar()&quot;
+    &gt;
+      Inicio
+    &lt;/a&gt;
+
+    &lt;hr class&#x3D;&quot;h-0.5 my-3 bg-black bg-opacity-25&quot; /&gt;
+
+    &lt;a
+      routerLink&#x3D;&quot;/section/politica&quot;
+      routerLinkActive&#x3D;&quot;border-l-4 border-black | dark:border-gray-200&quot;
+      class&#x3D;&quot;
+        block
+        py-2.5
+        px-4
+        font-serif
+        transition
+        duration-200
+        hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
+      &quot;
+      (mouseup)&#x3D;&quot;closeSidebar()&quot;
+    &gt;
+      Política
+    &lt;/a&gt;
+    &lt;a
+      routerLink&#x3D;&quot;/section/salud&quot;
+      routerLinkActive&#x3D;&quot;border-l-4 border-black | dark:border-gray-200&quot;
+      class&#x3D;&quot;
+        block
+        py-2.5
+        px-4
+        font-serif
+        transition
+        duration-200
+        hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
+      &quot;
+      (mouseup)&#x3D;&quot;closeSidebar()&quot;
+    &gt;
+      Salud
+    &lt;/a&gt;
+    &lt;a
+      routerLink&#x3D;&quot;/section/deporte&quot;
+      routerLinkActive&#x3D;&quot;border-l-4 border-black | dark:border-gray-200&quot;
+      class&#x3D;&quot;
+        block
+        py-2.5
+        px-4
+        font-serif
+        transition
+        duration-200
+        hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
+      &quot;
+      (mouseup)&#x3D;&quot;closeSidebar()&quot;
+    &gt;
+      Deportes
+    &lt;/a&gt;
+    &lt;a
+      routerLink&#x3D;&quot;/section/ciencia&quot;
+      routerLinkActive&#x3D;&quot;border-l-4 border-black | dark:border-gray-200&quot;
+      class&#x3D;&quot;
+        block
+        py-2.5
+        px-4
+        font-serif
+        transition
+        duration-200
+        hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
+      &quot;
+      (mouseup)&#x3D;&quot;closeSidebar()&quot;
+    &gt;
+      Ciencias
+    &lt;/a&gt;
+    &lt;hr class&#x3D;&quot;h-0.5 my-3 bg-black bg-opacity-25&quot; /&gt;
+    &lt;button
+      class&#x3D;&quot;
+        flex
+        items-center
+        w-full
+        hover:bg-black hover:text-white
+        ||
+        dark:hover:bg-gray-200 dark:hover:text-black
+      &quot;
+      (mouseup)&#x3D;&quot;toggleA11yModal()&quot;
+      title&#x3D;&quot;Abrir panel de accesibilidad&quot;
+    &gt;
+      &lt;span class&#x3D;&quot;material-icons pl-4&quot;&gt;settings_accessibility&lt;/span&gt;
+      &lt;a class&#x3D;&quot;py-2.5 px-4 font-serif transition duration-200&quot;
+        &gt;Accesibilidad&lt;/a
+      &gt;
+    &lt;/button&gt;
+  &lt;/nav&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- Cuando se haga toggle, activar esta clase: translate-x-0 --><!-- Mientras se esté en desarrollo, borrar esta clase: -translate-x-full --><div  class="    md:hidden    |    backdrop-filter backdrop-blur-md    bg-gray-200 bg-opacity-75    |    w-64    space-y-6    py-7    px-2    |    inset-y-0    left-0    overflow-y-auto    z-10    |    shadow-lg    fixed    |    transform    md:relative    transition    duration-200    ease-in-out    ||    dark:bg-gray-800 dark:bg-opacity-70 dark:text-gray-200  "  [class.-translate-x-full]="!isSidebarOpen">  <!-- logo -->  <div class="flex items-center justify-between px-4">    <a routerLink="/home">      <span class="text-2xl font-serif">Fisiniús</span>    </a>    <a class="flex items-center justify-center" (click)="closeSidebar()">      <span class="material-icons"> close </span>    </a>  </div>  <!-- nav -->  <nav>    <a      routerLink="/home"      routerLinkActive="border-l-4 border-black | dark:border-gray-200"      class="        block        py-2.5        px-4        font-serif        transition        duration-200        hover:bg-black hover:text-white        ||        dark:hover:bg-gray-200 dark:hover:text-black      "      (mouseup)="closeSidebar()"    >      Inicio    </a>    <hr class="h-0.5 my-3 bg-black bg-opacity-25" />    <a      routerLink="/section/politica"      routerLinkActive="border-l-4 border-black | dark:border-gray-200"      class="        block        py-2.5        px-4        font-serif        transition        duration-200        hover:bg-black hover:text-white        ||        dark:hover:bg-gray-200 dark:hover:text-black      "      (mouseup)="closeSidebar()"    >      Política    </a>    <a      routerLink="/section/salud"      routerLinkActive="border-l-4 border-black | dark:border-gray-200"      class="        block        py-2.5        px-4        font-serif        transition        duration-200        hover:bg-black hover:text-white        ||        dark:hover:bg-gray-200 dark:hover:text-black      "      (mouseup)="closeSidebar()"    >      Salud    </a>    <a      routerLink="/section/deporte"      routerLinkActive="border-l-4 border-black | dark:border-gray-200"      class="        block        py-2.5        px-4        font-serif        transition        duration-200        hover:bg-black hover:text-white        ||        dark:hover:bg-gray-200 dark:hover:text-black      "      (mouseup)="closeSidebar()"    >      Deportes    </a>    <a      routerLink="/section/ciencia"      routerLinkActive="border-l-4 border-black | dark:border-gray-200"      class="        block        py-2.5        px-4        font-serif        transition        duration-200        hover:bg-black hover:text-white        ||        dark:hover:bg-gray-200 dark:hover:text-black      "      (mouseup)="closeSidebar()"    >      Ciencias    </a>    <hr class="h-0.5 my-3 bg-black bg-opacity-25" />    <button      class="        flex        items-center        w-full        hover:bg-black hover:text-white        ||        dark:hover:bg-gray-200 dark:hover:text-black      "      (mouseup)="toggleA11yModal()"      title="Abrir panel de accesibilidad"    >      <span class="material-icons pl-4">settings_accessibility</span>      <a class="py-2.5 px-4 font-serif transition duration-200"        >Accesibilidad</a      >    </button>  </nav></div></div>'
+    var COMPONENTS = [{'name': 'A11yFormComponent', 'selector': 'app-a11y-form'},{'name': 'A11yModalComponent', 'selector': 'app-a11y-modal'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CienciaComponent', 'selector': 'app-ciencia'},{'name': 'DeporteComponent', 'selector': 'app-deporte'},{'name': 'FooterComponent', 'selector': 'shared-footer'},{'name': 'HeaderComponent', 'selector': 'shared-header'},{'name': 'HeadlineComponent', 'selector': 'app-headline'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoadingComponent', 'selector': 'shared-loading'},{'name': 'NewsBodyComponent', 'selector': 'app-news-body'},{'name': 'NewsComponent', 'selector': 'app-news'},{'name': 'NewsDataComponent', 'selector': 'app-news-data'},{'name': 'PoliticsComponent', 'selector': 'app-politics'},{'name': 'SaludComponent', 'selector': 'app-salud'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SectionsComponent', 'selector': 'app-sections'},{'name': 'SidebarComponent', 'selector': 'shared-sidebar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SidebarComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SidebarComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
