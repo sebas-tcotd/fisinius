@@ -6,33 +6,48 @@ import { environment } from 'src/environments/environment';
 import { Article } from '../interfaces/article.interface';
 import { News } from '../interfaces/news.interfaces';
 
+/**
+ * Servicio que otorga conexiones con la API de Fisiniús.
+ */
 @Injectable({
   providedIn: 'root',
 })
 export class NewsService {
+  /**
+   * URL base de la API de Fisiniús.
+   */
   url: string = environment.newsUrlBase;
 
   constructor(private http: HttpClient, private router: Router) {}
 
+  /** @ignore */
   private searchKeywordSource = new Subject<any>();
-  searchKeyword$: Observable<News> = this.searchKeywordSource.asObservable();
-
-  private newsIdSource = new Subject<string>();
-  newsId$: Observable<string> = this.newsIdSource.asObservable();
-  // sendWord(keyword: string) {
-  //   this.searchKeywordSource.next(
-  //     this.searchNews(keyword).pipe(tap((res) => console.log(res)))
-  //   );
-  // }
 
   /**
-   * Recibe todas las noticias habidas en la DB
+   * Observable que emite el valor de la palabra que se utiliza al momento de buscar.
+   */
+  searchKeyword$: Observable<News> = this.searchKeywordSource.asObservable();
+
+  /** @ignore */
+  private newsIdSource = new Subject<string>();
+
+  /**
+   *  Observable que emite el ID de una noticia singular.
+   */
+  newsId$: Observable<string> = this.newsIdSource.asObservable();
+
+  /**
+   * Recibe todas las noticias habidas en la DB.
    * @param from Parámetro de inicio
    * @param quantity Cantidad de noticias por recibir
    * @param category Categoría de la noticia
    * @returns Un observable del tipo News
    */
-  getAllNews(from: number, quantity: number, category: string = '') {
+  getAllNews(
+    from: number,
+    quantity: number,
+    category: string = ''
+  ): Observable<News> {
     const params: HttpParams = new HttpParams()
       .set('from', from)
       .set('limit', quantity)
@@ -42,17 +57,28 @@ export class NewsService {
   }
 
   /**
-   * Recibe una noticia en base a su ID
+   * Recibe una noticia en base a su ID.
    * @param id El id de la noticia
-   * @returns Un observable del tipo
+   * @returns Un observable del tipo Article.
    */
-  getNewsById(id: string) {
+  getNewsById(id: string): Observable<Article> {
     const params: HttpParams = new HttpParams().set('news_id', id);
 
     return this.http.get<Article>(`${this.url}/article`, { params });
   }
 
-  getNewsByCategory(from: number, quantity: number, category: string) {
+  /**
+   * Recibe las noticias por una categoría en específico.
+   * @param from ¿Desde qué número de noticia desea iniciar la recolección de noticias?
+   * @param quantity La cantidad de noticias para consultar.
+   * @param category El tipo de noticias que se quiere recuperar.
+   * @returns Un observable del tipo News
+   */
+  getNewsByCategory(
+    from: number,
+    quantity: number,
+    category: string
+  ): Observable<News> {
     const params = new HttpParams()
       .set('from', from)
       .set('limit', quantity)
@@ -61,7 +87,12 @@ export class NewsService {
     return this.http.get<News>(`${this.url}/news`, { params });
   }
 
-  searchNews(newsWord: string) {
+  /**
+   * Recibe las noticias en base a una palabra clave.
+   * @param newsWord La palabra que se quiere buscar.
+   * @returns Un observable del tipo Object.
+   */
+  searchNews(newsWord: string): Observable<Object> {
     const params = new HttpParams().set('news_word', newsWord);
 
     return this.http
@@ -69,11 +100,19 @@ export class NewsService {
       .pipe(tap((news) => this.searchKeywordSource.next(news)));
   }
 
-  setNewsId(id: string) {
+  /**
+   * Establece el ID de una noticia para su uso en otras partes de la aplicación.
+   * @param id El ID de la noticia.
+   */
+  setNewsId(id: string): void {
     this.newsIdSource.next(id);
   }
 
-  getNewsFullUrl() {
+  /**
+   * Obtiene la URL completa de una noticia.
+   * @returns Un observable que bien puede emitir un string o nada en su defecto.
+   */
+  getNewsFullUrl(): Observable<string | undefined> {
     return this.router.events.pipe(
       filter((ev) => ev instanceof NavigationEnd),
       map((ev) => {

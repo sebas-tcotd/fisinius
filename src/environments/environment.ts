@@ -2,6 +2,11 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+/**
+ * Variables de entorno que la aplicación utiliza para funcionar de manera correcta.
+ *
+ * Estas variables se reconocen a nivel de desarrollo.
+ */
 export const environment = {
   production: false,
   newsUrlBase: process.env.NG_APP_NEWS_URL_BASE,

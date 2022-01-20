@@ -42,7 +42,7 @@ Fisiniús es un portal de noticias enfocado a la accesibilidad.
 
 ## Documentación
 
-Puedes ver la documentación técnica de la parte del front-end [ingresando a este link](#).
+Puedes ver la documentación técnica de la parte del front-end [ingresando a este link](https://sebas-tcotd.github.io/fisinius/).
 
 <!-- Añadir la documentación del Compodoc en reemplazo de la almohadilla -->
 
