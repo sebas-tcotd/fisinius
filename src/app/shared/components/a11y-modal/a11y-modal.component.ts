@@ -9,6 +9,9 @@ import {
   EventEmitter,
 } from '@angular/core';
 
+/**
+ * Componente que contiene el formulario de accesibilidad.
+ */
 @Component({
   selector: 'app-a11y-modal',
   templateUrl: './a11y-modal.component.html',
@@ -18,11 +21,8 @@ export class A11yModalComponent implements OnChanges {
   @Input() isModalActive: boolean = false;
   @Output() modalStatusEmitter = new EventEmitter<boolean>();
   @ViewChild('modalOverlay') modalOverlay!: ElementRef;
-  // modalOverlay = document.getElementById('overlay');
 
-  constructor() {}
-
-  ngOnChanges(changes: SimpleChanges) {
+  ngOnChanges(changes: SimpleChanges): void {
     let modalStatus = changes['isModalActive'];
     if (modalStatus.currentValue === true) {
       this.modalOverlay.nativeElement.classList.remove('hidden');
@@ -30,7 +30,10 @@ export class A11yModalComponent implements OnChanges {
     }
   }
 
-  closeModal() {
+  /**
+   * Cierra el panel de accesibilidad.
+   */
+  closeModal(): void {
     this.isModalActive = false;
     this.modalStatusEmitter.emit(this.isModalActive);
 

@@ -1,7 +1,13 @@
+/**
+ * La interfaz que contiene los datos de la noticia.
+ */
 export interface Article {
   news: ArticleElement;
 }
 
+/**
+ * Metadata de una noticia singular.
+ */
 export interface ArticleElement {
   abstract: string;
   authors_names: string[];

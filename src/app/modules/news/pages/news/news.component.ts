@@ -3,13 +3,19 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { ArticleElement } from 'src/app/core/interfaces/article.interface';
 import { NewsService } from 'src/app/core/services/news.service';
 
+/**
+ * Componente que contiene una noticia.
+ */
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
   styleUrls: [],
 })
 export class NewsComponent implements OnInit {
+  /** ID de la noticia. */
   newsID: string = '';
+
+  /** Metadata de la noticia. */
   article!: ArticleElement;
 
   constructor(
