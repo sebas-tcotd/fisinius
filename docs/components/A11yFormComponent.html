@@ -19,7 +19,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -35,7 +35,7 @@
 
 
 <ol class="breadcrumb">
-  <li>Componentes</li>
+  <li>Components</li>
   <li
   >
   A11yFormComponent</li>
@@ -61,17 +61,24 @@
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info"><p class="comment">
-    <h3>Fichero</h3>
+    <h3>File</h3>
 </p>
 <p class="comment">
     <code>src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts</code>
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente que muestra el formulario de las opciones de accesibilidad.</p>
+
+    </p>
 
 
     <p class="comment">
-        <h3>Implementa</h3>
+        <h3>Implements</h3>
     </p>
     <p class="comment">
                     <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
@@ -80,7 +87,7 @@
 
 
 <section>
-    <h3>Meta datos</h3>
+    <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
 
@@ -123,12 +130,12 @@
 </section>
 
     <section>
-    <h3 id="index">Índice</h3>
+    <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Propiedades</b></h6>
+                        <h6><b>Properties</b></h6>
                     </td>
                 </tr>
                 <tr>
@@ -152,7 +159,7 @@
 
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Métodos</b></h6>
+                        <h6><b>Methods</b></h6>
                     </td>
                 </tr>
                 <tr>
@@ -194,25 +201,25 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(a11yService: <a href="../injectables/A11yService.html" target="_self">A11yService</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, azure: <a href="../injectables/AzureService.html" target="_self">AzureService</a>, newsService: <a href="../injectables/NewsService.html" target="_self">NewsService</a>)</code>
+<code>constructor(a11yService: <a href="../injectables/A11yService.html" target="_self">A11yService</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, azure: <a href="../injectables/AzureService.html" target="_self">AzureService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="42" class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:42</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:53</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
                             <div>
-                                    <b>Parámetros :</b>
+                                    <b>Parameters :</b>
                                     <table class="params">
                                         <thead>
                                             <tr>
-                                                <td>Nombre</td>
-                                                    <td>Tipo</td>
-                                                <td>Opcional</td>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -252,18 +259,6 @@
                                                     </td>
                                                     
                                                 </tr>
-                                                <tr>
-                                                        <td>newsService</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/NewsService.html" target="_self" >NewsService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -280,7 +275,7 @@
     <section>
     
     <h3 id="methods">
-        Métodos
+        Methods
     </h3>
     <table class="table table-sm table-bordered">
         <tbody>
@@ -302,17 +297,19 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="85"
-                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:85</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:107</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Inicializa el lector inmersivo.</p>
+</div>
 
                     <div class="io-description">
-                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                 </td>
@@ -339,8 +336,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="59"
-                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:59</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:69</a></div>
                 </td>
             </tr>
 
@@ -349,7 +346,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                 </td>
@@ -376,8 +373,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="51"
-                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:51</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:61</a></div>
                 </td>
             </tr>
 
@@ -386,7 +383,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                 </td>
@@ -413,17 +410,19 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="80"
-                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:80</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:99</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Establece el filtro daltónico.</p>
+</div>
 
                     <div class="io-description">
-                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                 </td>
@@ -450,17 +449,19 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="70"
-                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:70</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:83</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Establece el estado del lector immersivo.</p>
+</div>
 
                     <div class="io-description">
-                        <b>Devuelve : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                     </div>
                 </td>
@@ -487,17 +488,19 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="75"
-                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:75</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="91"
+                            class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:91</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Alterna el tema de la aplicación.</p>
+</div>
 
                     <div class="io-description">
-                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                 </td>
@@ -508,7 +511,7 @@
     <section>
     
     <h3 id="inputs">
-        Propiedades
+        Properties
     </h3>
     <table class="table table-sm table-bordered">
         <tbody>
@@ -523,16 +526,22 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
 
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="28" class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:35</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Atributo que contiene al formulario de accesibilidad</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -549,13 +558,13 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Tipo : </i>    <code>[]</code>
+                        <i>Type : </i>    <code>[]</code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Valor por defecto : </i><code>[
+                        <i>Default value : </i><code>[
     { value: &#x27;protanopia&#x27;, name: &#x27;Protanopía&#x27; },
     { value: &#x27;deuteranopia&#x27;, name: &#x27;Deuteranopía&#x27; },
     { value: &#x27;tritanopia&#x27;, name: &#x27;Tritanopía&#x27; },
@@ -569,10 +578,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="31" class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:31</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:41</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Colección de filtros daltónicos</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -589,13 +604,13 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Tipo : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <b>Decoradores : </b>
+                        <b>Decorators : </b>
                         <br />
                         <code>
                             @ViewChild(&#x27;darkMode&#x27;)<br />
@@ -604,10 +619,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="42" class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:42</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:53</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Elemento HTML Input que permite activar el modo oscuro</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -624,21 +645,27 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Valor por defecto : </i><code>true</code>
+                        <i>Default value : </i><code>true</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="29" class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/shared/components/a11y-modal/a11y-form/a11y-form.component.ts:38</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Contiene el estado del narrador inmmersivo</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -660,6 +687,9 @@ import { A11yService } from &#x27;src/app/core/services/a11y.service&#x27;;
 import { AzureService } from &#x27;src/app/core/services/azure.service&#x27;;
 import { NewsService } from &#x27;src/app/core/services/news.service&#x27;;
 
+/**
+ * Variable que contiene las características para iniciar el lector immersivo.
+ */
 declare const ImmersiveReader: {
   launchAsync(
     token: string,
@@ -669,15 +699,22 @@ declare const ImmersiveReader: {
   ): Promise&lt;any&gt;;
 };
 
+/**
+ * Componente que muestra el formulario de las opciones de accesibilidad.
+ */
 @Component({
   selector: &#x27;app-a11y-form&#x27;,
   templateUrl: &#x27;./a11y-form.component.html&#x27;,
   styleUrls: [&#x27;./a11y-form.component.scss&#x27;],
 })
 export class A11yFormComponent implements OnInit, AfterViewInit {
+  /** Atributo que contiene al formulario de accesibilidad */
   a11yForm!: FormGroup;
+
+  /** Contiene el estado del narrador inmmersivo */
   isNarratorDisabled: boolean &#x3D; true;
 
+  /** Colección de filtros daltónicos */
   colorblindFilters &#x3D; [
     { value: &#x27;protanopia&#x27;, name: &#x27;Protanopía&#x27; },
     { value: &#x27;deuteranopia&#x27;, name: &#x27;Deuteranopía&#x27; },
@@ -689,13 +726,13 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
     { value: &#x27;achromatomaly&#x27;, name: &#x27;Acromatomalía&#x27; },
   ];
 
+  /** Elemento HTML Input que permite activar el modo oscuro */
   @ViewChild(&#x27;darkMode&#x27;) darkModeInput!: ElementRef;
 
   constructor(
     private a11yService: A11yService,
     private fb: FormBuilder,
-    private azure: AzureService,
-    private newsService: NewsService
+    private azure: AzureService
   ) {}
 
   ngOnInit(): void {
@@ -717,22 +754,34 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
     this.a11yForm.patchValue({ colorblindFilter: colorFilter });
   }
 
-  setNarratorStatus() {
+  /**
+   * Establece el estado del lector immersivo.
+   */
+  setNarratorStatus(): boolean {
     this.isNarratorDisabled &#x3D; this.a11yService.narrationDesactivated;
     return this.isNarratorDisabled;
   }
 
-  toggleDarkMode() {
+  /**
+   * Alterna el tema de la aplicación.
+   */
+  toggleDarkMode(): void {
     this.a11yService.toggleDarkTheme();
     this.darkModeInput.nativeElement.toggleAttribute(&#x27;checked&#x27;);
   }
 
-  setColorblindFilter() {
+  /**
+   * Establece el filtro daltónico.
+   */
+  setColorblindFilter(): void {
     const filter &#x3D; this.a11yForm.get(&#x27;colorblindFilter&#x27;)?.value;
     this.a11yService.setColorblindFilter(filter);
   }
 
-  launchImmersiveReader() {
+  /**
+   * Inicializa el lector inmersivo.
+   */
+  launchImmersiveReader(): void {
     const content &#x3D; {
       title: document.getElementById(&#x27;ir-title&#x27;)?.innerHTML,
       chunks: [
@@ -749,7 +798,7 @@ export class A11yFormComponent implements OnInit, AfterViewInit {
     };
 
     this.azure.getTokenAndSubdomain().subscribe(
-      (res) &#x3D;&gt; {
+      () &#x3D;&gt; {
         ImmersiveReader.launchAsync(
           this.azure.token,
           this.azure.subdomain,
@@ -868,16 +917,16 @@ input:checked ~ .line {
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
-                <b>Leyenda</b>
+                <b>Legend</b>
             </div>
             <div>
-                <div class="color htmlelement"></div><span>Elemento Html</span>
+                <div class="color htmlelement"></div><span>Html element</span>
             </div>
             <div>
-                <div class="color component"></div><span>Componente</span>
+                <div class="color component"></div><span>Component</span>
             </div>
             <div>
-                <div class="color directive"></div><span>Elemento Html con directiva</span>
+                <div class="color directive"></div><span>Html element with directive</span>
             </div>
         </div>
     </div>
@@ -913,11 +962,11 @@ input:checked ~ .line {
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
-        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
     </div>
 </div>
 </div>

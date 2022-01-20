@@ -19,7 +19,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -42,7 +42,7 @@
 
 
 <ol class="breadcrumb">
-  <li>Tuberías</li>
+  <li>Pipes</li>
   <li >ImgNewsPipe</li>
 </ol>
 
@@ -59,21 +59,29 @@
     <div class="tab-pane fade active in" id="c-info">
 
         <p class="comment">
-            <h3>Fichero</h3>
+            <h3>File</h3>
         </p>
         <p class="comment">
             <code>src/app/shared/pipes/img-news.pipe.ts</code>
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Pipe que determina si una imagen recibe una url válida para ser mostrada.</p>
+<p>Caso contrario, se mostrará una imagen placeholder.</p>
+
+            </p>
 
 
         <section>
-            <h3>Meta datos</h3>
+            <h3>Metadata</h3>
             <table class="table table-sm table-hover metadata">
                 <tbody>
                     <tr>
-                        <td class="col-md-3">Nombre</td>
+                        <td class="col-md-3">Name</td>
                         <td class="col-md-9">imgNews</td>
                     </tr>
                 </tbody>
@@ -83,7 +91,7 @@
             <section>
     
     <h3 id="methods">
-        Métodos
+        Methods
     </h3>
     <table class="table table-sm table-bordered">
         <tbody>
@@ -107,24 +115,27 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="9"
-                            class="link-to-prism">src/app/shared/pipes/img-news.pipe.ts:9</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/shared/pipes/img-news.pipe.ts:20</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Método transformador del pipe.</p>
+</div>
 
                     <div class="io-description">
-                        <b>Parámetros :</b>
+                        <b>Parameters :</b>
                         
                         <table class="params">
                             <thead>
                                 <tr>
-                                    <td>Nombre</td>
-                                    <td>Tipo</td>
-                                    <td>Opcional</td>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -139,6 +150,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>La url de la imagen a verificar.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -146,11 +161,12 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Devuelve : </b>    <code>unknown</code>
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Una promesa de tipo string.</p>
+
                     </div>
                 </td>
             </tr>
@@ -178,24 +194,27 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="16"
-                            class="link-to-prism">src/app/shared/pipes/img-news.pipe.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/shared/pipes/img-news.pipe.ts:32</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Verifica si la imagen contiene una URL válida (HTTP 200 OK).</p>
+</div>
 
                     <div class="io-description">
-                        <b>Parámetros :</b>
+                        <b>Parameters :</b>
                         
                         <table class="params">
                             <thead>
                                 <tr>
-                                    <td>Nombre</td>
-                                    <td>Tipo</td>
-                                    <td>Opcional</td>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -210,6 +229,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>La URL de la imagen a ser verificada.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -217,11 +240,12 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Devuelve : </b>    <code>Promise&lt;boolean&gt;</code>
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Una promesa de tipo boolean.</p>
+
                     </div>
                 </td>
             </tr>
@@ -231,7 +255,7 @@
             <section>
     
     <h3 id="inputs">
-        Propiedades
+        Properties
     </h3>
     <table class="table table-sm table-bordered">
         <tbody>
@@ -246,21 +270,27 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Valor por defecto : </i><code>&#x27;../../../../../assets/img/news-placeholder.webp&#x27;</code>
+                        <i>Default value : </i><code>&#x27;../../../../../assets/img/news-placeholder.webp&#x27;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="7" class="link-to-prism">src/app/shared/pipes/img-news.pipe.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/shared/pipes/img-news.pipe.ts:13</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Ruta de la imagen placeholder.</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -272,19 +302,35 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Pipe, PipeTransform } from &#x27;@angular/core&#x27;;
 
+/**
+ * Pipe que determina si una imagen recibe una url válida para ser mostrada.
+ *
+ * Caso contrario, se mostrará una imagen placeholder.
+ */
 @Pipe({
   name: &#x27;imgNews&#x27;,
 })
 export class ImgNewsPipe implements PipeTransform {
+  /** Ruta de la imagen placeholder. */
   defaultImage: string &#x3D; &#x27;../../../../../assets/img/news-placeholder.webp&#x27;;
 
-  async transform(url: string) {
+  /**
+   * Método transformador del pipe.
+   * @param url La url de la imagen a verificar.
+   * @returns Una promesa de tipo string.
+   */
+  async transform(url: string): Promise&lt;string&gt; {
     if (await this.verifyImage(url)) {
       return url;
     }
     return this.defaultImage;
   }
 
+  /**
+   * Verifica si la imagen contiene una URL válida (HTTP 200 OK).
+   * @param url La URL de la imagen a ser verificada.
+   * @returns Una promesa de tipo boolean.
+   */
   async verifyImage(url: string | null | undefined): Promise&lt;boolean&gt; {
     if (!url) {
       return false;
@@ -312,11 +358,11 @@ export class ImgNewsPipe implements PipeTransform {
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
-        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
     </div>
 </div>
 </div>

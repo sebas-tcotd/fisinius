@@ -19,7 +19,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -39,7 +39,7 @@
 
 
 <ol class="breadcrumb">
-  <li>Inyectables</li>
+  <li>Injectables</li>
   <li >A11yService</li>
 </ol>
 
@@ -55,23 +55,30 @@
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info">
         <p class="comment">
-            <h3>Fichero</h3>
+            <h3>File</h3>
         </p>
         <p class="comment">
             <code>src/app/core/services/a11y.service.ts</code>
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Servicio que otorga características de accesibilidad.</p>
+
+            </p>
 
 
 
             <section>
-    <h3 id="index">Índice</h3>
+    <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Propiedades</b></h6>
+                        <h6><b>Properties</b></h6>
                     </td>
                 </tr>
                 <tr>
@@ -91,7 +98,7 @@
 
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Métodos</b></h6>
+                        <h6><b>Methods</b></h6>
                     </td>
                 </tr>
                 <tr>
@@ -122,7 +129,7 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <h6><b>Accesorios</b></h6>
+                            <h6><b>Accessors</b></h6>
                         </td>
                     </tr>
                     <tr>
@@ -141,29 +148,11 @@
     </table>
 </section>
 
-            <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="8" class="link-to-prism">src/app/core/services/a11y.service.ts:8</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
             <section>
     
     <h3 id="methods">
-        Métodos
+        Methods
     </h3>
     <table class="table table-sm table-bordered">
         <tbody>
@@ -185,17 +174,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="31"
-                            class="link-to-prism">src/app/core/services/a11y.service.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/core/services/a11y.service.ts:53</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Chequea si el valor del filtro daltónico está almacenado de manera local.</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
-                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>string | null</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>El valor del filtro daltónico seleccionado.</p>
 
                     </div>
                 </td>
@@ -222,17 +219,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="27"
-                            class="link-to-prism">src/app/core/services/a11y.service.ts:27</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/core/services/a11y.service.ts:45</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Chequea el valor de tema seleccionado por el usuario.</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
-                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>string | null</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>El valor de la apariencia de la aplicación (claro u oscuro).</p>
 
                     </div>
                 </td>
@@ -259,24 +264,27 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="47"
-                            class="link-to-prism">src/app/core/services/a11y.service.ts:47</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/core/services/a11y.service.ts:76</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Establece el filtro daltónico.</p>
+</div>
 
                     <div class="io-description">
-                        <b>Parámetros :</b>
+                        <b>Parameters :</b>
                         
                         <table class="params">
                             <thead>
                                 <tr>
-                                    <td>Nombre</td>
-                                    <td>Tipo</td>
-                                    <td>Opcional</td>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -291,6 +299,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>El valor del filtro daltónico.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -298,7 +310,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                     <div class="io-description">
@@ -328,17 +340,19 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="35"
-                            class="link-to-prism">src/app/core/services/a11y.service.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/core/services/a11y.service.ts:60</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Alterna el tema de la aplicación.</p>
+</div>
 
                     <div class="io-description">
-                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                 </td>
@@ -365,17 +379,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="65"
-                            class="link-to-prism">src/app/core/services/a11y.service.ts:65</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/app/core/services/a11y.service.ts:90</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Activa el estado de la narración inmersiva.</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
-                        <b>Devuelve : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>El estado de la narración.</p>
 
                     </div>
                 </td>
@@ -386,7 +408,7 @@
             <section>
     
     <h3 id="inputs">
-        Propiedades
+        Properties
     </h3>
     <table class="table table-sm table-bordered">
         <tbody>
@@ -402,18 +424,18 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Valor por defecto : </i><code>false</code>
+                        <i>Default value : </i><code>false</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="8" class="link-to-prism">src/app/core/services/a11y.service.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/core/services/a11y.service.ts:11</a></div>
                         </td>
                     </tr>
 
@@ -434,18 +456,18 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Valor por defecto : </i><code>false</code>
+                        <i>Default value : </i><code>false</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="7" class="link-to-prism">src/app/core/services/a11y.service.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/core/services/a11y.service.ts:10</a></div>
                         </td>
                     </tr>
 
@@ -456,7 +478,7 @@
 
             <section>
     <h3 id="accessors">
-        Accesorios
+        Accessors
     </h3>
         <table class="table table-sm table-bordered">
             <tbody>
@@ -474,9 +496,16 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Definido en <a href="" data-line="11" class="link-to-prism">src/app/core/services/a11y.service.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/core/services/a11y.service.ts:16</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Retorna el modo de la narración.</p>
+</div>
+
+                        </td>
+                    </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -485,20 +514,22 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Definido en <a href="" data-line="15" class="link-to-prism">src/app/core/services/a11y.service.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/core/services/a11y.service.ts:23</a></div>
                                 </td>
                             </tr>
                     <tr>
                         <td class="col-md-4">
+                                <div class="io-description"><p>Establece el modo de la narración.</p>
+</div>
 
                                 <div class="io-description">
-                                        <b>Parámetros :</b>
+                                        <b>Parameters :</b>
                                         <table class="params">
                                             <thead>
                                                 <tr>
-                                                    <td>Nombre</td>
-                                                        <td>Tipo</td>
-                                                    <td>Opcional</td>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -520,7 +551,7 @@
                                 <div>
                                 </div>
                                 <div class="io-description">
-                                    <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                                 </div>
                         </td>
@@ -543,9 +574,16 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Definido en <a href="" data-line="19" class="link-to-prism">src/app/core/services/a11y.service.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/core/services/a11y.service.ts:30</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Retorna si la narración está desactivada.</p>
+</div>
+
+                        </td>
+                    </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -554,20 +592,22 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Definido en <a href="" data-line="23" class="link-to-prism">src/app/core/services/a11y.service.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/core/services/a11y.service.ts:37</a></div>
                                 </td>
                             </tr>
                     <tr>
                         <td class="col-md-4">
+                                <div class="io-description"><p>Establece el estado de la narración.</p>
+</div>
 
                                 <div class="io-description">
-                                        <b>Parámetros :</b>
+                                        <b>Parameters :</b>
                                         <table class="params">
                                             <thead>
                                                 <tr>
-                                                    <td>Nombre</td>
-                                                        <td>Tipo</td>
-                                                    <td>Opcional</td>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -589,7 +629,7 @@
                                 <div>
                                 </div>
                                 <div class="io-description">
-                                    <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                                 </div>
                         </td>
@@ -603,39 +643,64 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 
+/**
+ * Servicio que otorga características de accesibilidad.
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;,
 })
 export class A11yService {
   private _narrationMode: boolean &#x3D; false;
   private _narrationDesactivated: boolean &#x3D; false;
-  constructor() {}
 
+  /**
+   * Retorna el modo de la narración.
+   */
   get narrationMode() {
     return this._narrationMode;
   }
 
+  /**
+   * Establece el modo de la narración.
+   */
   set narrationMode(mode: boolean) {
     this._narrationMode &#x3D; mode;
   }
 
-  get narrationDesactivated(){
+  /**
+   * Retorna si la narración está desactivada.
+   */
+  get narrationDesactivated() {
     return this._narrationDesactivated;
   }
 
+  /**
+   * Establece el estado de la narración.
+   */
   set narrationDesactivated(status: boolean) {
     this._narrationDesactivated &#x3D; status;
   }
 
-  checkCurrentMode() {
+  /**
+   * Chequea el valor de tema seleccionado por el usuario.
+   * @returns El valor de la apariencia de la aplicación (claro u oscuro).
+   */
+  checkCurrentMode(): string | null {
     return localStorage.getItem(&#x27;theme&#x27;);
   }
 
-  checkCurrentColorblindFilter() {
+  /**
+   * Chequea si el valor del filtro daltónico está almacenado de manera local.
+   * @returns El valor del filtro daltónico seleccionado.
+   */
+  checkCurrentColorblindFilter(): string | null {
     return localStorage.getItem(&#x27;color-blind-filter&#x27;);
   }
 
-  toggleDarkTheme() {
+  /**
+   * Alterna el tema de la aplicación.
+   */
+  toggleDarkTheme(): void {
     const theme &#x3D; localStorage.getItem(&#x27;theme&#x27;);
 
     if (theme &#x3D;&#x3D;&#x3D; &#x27;dark&#x27;) {
@@ -647,7 +712,11 @@ export class A11yService {
     }
   }
 
-  setColorblindFilter(filter: string) {
+  /**
+   * Establece el filtro daltónico.
+   * @param filter El valor del filtro daltónico.
+   */
+  setColorblindFilter(filter: string): void {
     if (filter &#x3D;&#x3D;&#x3D; &#x27;none&#x27;) {
       localStorage.setItem(&#x27;color-blind-filter&#x27;, filter);
       document.documentElement.removeAttribute(&#x27;style&#x27;);
@@ -655,17 +724,13 @@ export class A11yService {
       localStorage.setItem(&#x27;color-blind-filter&#x27;, filter);
       document.documentElement.style.filter &#x3D; &#x60;url(&#x27;../../../assets/img/filters.svg#${filter}&#x27;)&#x60;;
     }
-
-    /*if (filter) {
-      localStorage.setItem(&#x27;color-blind-filter&#x27;, filter);
-      document.documentElement.style.filter &#x3D; &#x60;url(&#x27;../../../assets/img/filters.svg#${filter}&#x27;)&#x60;;
-    } else if (filter &#x3D;&#x3D;&#x3D; &#x27;none&#x27;) {
-      // localStorage.setItem(&#x27;color-blind-filter&#x27;, &#x27;none&#x27;);
-      document.documentElement.removeAttribute(&#x27;style&#x27;);
-    }*/
   }
 
-  toggleImmersiveNarration() {
+  /**
+   * Activa el estado de la narración inmersiva.
+   * @returns El estado de la narración.
+   */
+  toggleImmersiveNarration(): boolean {
     this.narrationMode &#x3D; !this.narrationMode;
     return this.narrationMode;
   }
@@ -688,11 +753,11 @@ export class A11yService {
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
-        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
     </div>
 </div>
 </div>

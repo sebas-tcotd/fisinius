@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "compodoc:build": "compodoc -p tsconfig.doc.json --language es-ES --hideGenerator -d docs",
-    "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
+    "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -d docs -s",
     "compodoc:serve": "compodoc -s"
   },
   "private": true,

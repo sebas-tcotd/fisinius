@@ -19,7 +19,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -35,7 +35,7 @@
 
 
 <ol class="breadcrumb">
-  <li>Componentes</li>
+  <li>Components</li>
   <li
   >
   NewsBodyComponent</li>
@@ -58,19 +58,26 @@
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info"><p class="comment">
-    <h3>Fichero</h3>
+    <h3>File</h3>
 </p>
 <p class="comment">
     <code>src/app/modules/news/components/news-body/news-body.component.ts</code>
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente que muestra el cuerpo de la noticia y su url original.</p>
+
+    </p>
 
 
 
 
 <section>
-    <h3>Meta datos</h3>
+    <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
 
@@ -109,14 +116,14 @@
 </section>
 
     <section>
-    <h3 id="index">Índice</h3>
+    <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
 
 
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Entradas</b></h6>
+                        <h6><b>Inputs</b></h6>
                     </td>
                 </tr>
                 <tr>
@@ -139,27 +146,9 @@
     </table>
 </section>
 
-    <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="10" class="link-to-prism">src/app/modules/news/components/news-body/news-body.component.ts:10</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
     <section>
-    <h3 id="inputs">Entradas</h3>
+    <h3 id="inputs">Inputs</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -170,20 +159,26 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Valor por defecto : </i><code>&#x27;&#x27;</code>
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Definido en <a href="" data-line="10" class="link-to-prism">src/app/modules/news/components/news-body/news-body.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/modules/news/components/news-body/news-body.component.ts:15</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Atributo que recibe el cuerpo de la noticia.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -196,20 +191,26 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Valor por defecto : </i><code>&#x27;&#x27;</code>
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Definido en <a href="" data-line="9" class="link-to-prism">src/app/modules/news/components/news-body/news-body.component.ts:9</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/modules/news/components/news-body/news-body.component.ts:13</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Atributo que recibe la url de la noticia original.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -224,16 +225,19 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
 
+/**
+ * Componente que muestra el cuerpo de la noticia y su url original.
+ */
 @Component({
   selector: &#x27;app-news-body&#x27;,
   templateUrl: &#x27;./news-body.component.html&#x27;,
   styleUrls: [],
 })
 export class NewsBodyComponent {
+  /** Atributo que recibe la url de la noticia original. */
   @Input() articleSource: string &#x3D; &#x27;&#x27;;
+  /** Atributo que recibe el cuerpo de la noticia. */
   @Input() articleBody: string &#x3D; &#x27;&#x27;;
-
-  constructor() {}
 }
 </code></pre>
     </div>
@@ -299,16 +303,16 @@ export class NewsBodyComponent {
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
-                <b>Leyenda</b>
+                <b>Legend</b>
             </div>
             <div>
-                <div class="color htmlelement"></div><span>Elemento Html</span>
+                <div class="color htmlelement"></div><span>Html element</span>
             </div>
             <div>
-                <div class="color component"></div><span>Componente</span>
+                <div class="color component"></div><span>Component</span>
             </div>
             <div>
-                <div class="color directive"></div><span>Elemento Html con directiva</span>
+                <div class="color directive"></div><span>Html element with directive</span>
             </div>
         </div>
     </div>
@@ -344,11 +348,11 @@ export class NewsBodyComponent {
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
-        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
     </div>
 </div>
 </div>

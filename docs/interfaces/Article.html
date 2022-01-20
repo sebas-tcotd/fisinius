@@ -19,7 +19,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -62,22 +62,29 @@
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info">
         <p class="comment">
-            <h3>Fichero</h3>
+            <h3>File</h3>
         </p>
         <p class="comment">
             <code>src/app/core/interfaces/article.interface.ts</code>
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>La interfaz que contiene los datos de la noticia.</p>
+
+            </p>
 
 
         <section>
-            <h3 id="index">Índice</h3>
+            <h3 id="index">Index</h3>
             <table class="table table-sm table-bordered index-table">
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <h6><b>Propiedades</b></h6>
+                            <h6><b>Properties</b></h6>
                         </td>
                     </tr>
                     <tr>
@@ -99,7 +106,7 @@
 
 
             <section>
-                <h3 id="inputs">Propiedades</h3>
+                <h3 id="inputs">Properties</h3>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
@@ -122,7 +129,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Tipo : </i>        <code><a href="../interfaces/ArticleElement.html" target="_self" >ArticleElement</a></code>
+                                            <i>Type : </i>        <code><a href="../interfaces/ArticleElement.html" target="_self" >ArticleElement</a></code>
 
                                         </td>
                                     </tr>
@@ -142,6 +149,9 @@
   news: ArticleElement;
 }
 
+/**
+ * Metadata de una noticia singular.
+ */
 export interface ArticleElement {
   abstract: string;
   authors_names: string[];
@@ -167,11 +177,11 @@ export interface ArticleElement {
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
-        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
     </div>
 </div>
 </div>

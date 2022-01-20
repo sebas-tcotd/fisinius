@@ -19,7 +19,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -35,7 +35,7 @@
 
 
 <ol class="breadcrumb">
-  <li>Componentes</li>
+  <li>Components</li>
   <li
   >
   HeadlineComponent</li>
@@ -58,19 +58,26 @@
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info"><p class="comment">
-    <h3>Fichero</h3>
+    <h3>File</h3>
 </p>
 <p class="comment">
     <code>src/app/shared/components/headline/headline.component.ts</code>
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente que muestra el titular de una noticia.</p>
+
+    </p>
 
 
 
 
 <section>
-    <h3>Meta datos</h3>
+    <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
 
@@ -109,14 +116,14 @@
 </section>
 
     <section>
-    <h3 id="index">Índice</h3>
+    <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
 
 
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Entradas</b></h6>
+                        <h6><b>Inputs</b></h6>
                     </td>
                 </tr>
                 <tr>
@@ -136,27 +143,9 @@
     </table>
 </section>
 
-    <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="10" class="link-to-prism">src/app/shared/components/headline/headline.component.ts:10</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
     <section>
-    <h3 id="inputs">Entradas</h3>
+    <h3 id="inputs">Inputs</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -167,15 +156,21 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Tipo : </i>        <code><a href="../interfaces/NewsElement.html" target="_self" >NewsElement</a></code>
+                        <i>Type : </i>        <code><a href="../interfaces/NewsElement.html" target="_self" >NewsElement</a></code>
 
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Definido en <a href="" data-line="10" class="link-to-prism">src/app/shared/components/headline/headline.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/components/headline/headline.component.ts:14</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Atributo que recibe la data del titular.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -191,15 +186,17 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
 import { NewsElement } from &#x27;src/app/core/interfaces/news.interfaces&#x27;;
 
+/**
+ * Componente que muestra el titular de una noticia.
+ */
 @Component({
   selector: &#x27;app-headline&#x27;,
   templateUrl: &#x27;./headline.component.html&#x27;,
   styleUrls: [],
 })
 export class HeadlineComponent {
+  /** Atributo que recibe la data del titular. */
   @Input() headline!: NewsElement;
-
-  constructor() {}
 }
 </code></pre>
     </div>
@@ -243,16 +240,16 @@ export class HeadlineComponent {
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
-                <b>Leyenda</b>
+                <b>Legend</b>
             </div>
             <div>
-                <div class="color htmlelement"></div><span>Elemento Html</span>
+                <div class="color htmlelement"></div><span>Html element</span>
             </div>
             <div>
-                <div class="color component"></div><span>Componente</span>
+                <div class="color component"></div><span>Component</span>
             </div>
             <div>
-                <div class="color directive"></div><span>Elemento Html con directiva</span>
+                <div class="color directive"></div><span>Html element with directive</span>
             </div>
         </div>
     </div>
@@ -288,11 +285,11 @@ export class HeadlineComponent {
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
-        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
     </div>
 </div>
 </div>

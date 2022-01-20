@@ -19,7 +19,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -35,7 +35,7 @@
 
 
 <ol class="breadcrumb">
-  <li>Componentes</li>
+  <li>Components</li>
   <li
   >
   SectionsComponent</li>
@@ -58,19 +58,26 @@
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info"><p class="comment">
-    <h3>Fichero</h3>
+    <h3>File</h3>
 </p>
 <p class="comment">
     <code>src/app/modules/sections/pages/sections/sections.component.ts</code>
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente que contiene el enrutamiento a las secciones de las noticias.</p>
+
+    </p>
 
 
 
 
 <section>
-    <h3>Meta datos</h3>
+    <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
 
@@ -109,24 +116,6 @@
 </section>
 
 
-    <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Definido en <a href="" data-line="8" class="link-to-prism">src/app/modules/sections/pages/sections/sections.component.ts:8</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
 
 
@@ -140,14 +129,15 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
+/**
+ * Componente que contiene el enrutamiento a las secciones de las noticias.
+ */
 @Component({
   selector: &#x27;app-sections&#x27;,
   templateUrl: &#x27;./sections.component.html&#x27;,
   styleUrls: [],
 })
-export class SectionsComponent {
-  constructor() {}
-}
+export class SectionsComponent {}
 </code></pre>
     </div>
 
@@ -163,16 +153,16 @@ export class SectionsComponent {
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
-                <b>Leyenda</b>
+                <b>Legend</b>
             </div>
             <div>
-                <div class="color htmlelement"></div><span>Elemento Html</span>
+                <div class="color htmlelement"></div><span>Html element</span>
             </div>
             <div>
-                <div class="color component"></div><span>Componente</span>
+                <div class="color component"></div><span>Component</span>
             </div>
             <div>
-                <div class="color directive"></div><span>Elemento Html con directiva</span>
+                <div class="color directive"></div><span>Html element with directive</span>
             </div>
         </div>
     </div>
@@ -208,11 +198,11 @@ export class SectionsComponent {
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
-        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
     </div>
 </div>
 </div>
