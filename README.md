@@ -50,4 +50,5 @@ De la misma manera, puedes visitar el repositorio del back-end [ingresando a est
 
 <!-- ## Autores
 - [@sebas-tcotd](https://github.com/sebas-tcotd): Front-end
-- [@maurck](https://github.com/Maurck): Back-end -->
+- [@maurck](https://github.com/Maurck): Back-end
+- [@MartinRC26](https://github.com/MartinRC26): Logística -->
