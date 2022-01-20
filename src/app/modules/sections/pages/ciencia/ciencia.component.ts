@@ -2,12 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { News } from 'src/app/core/interfaces/news.interfaces';
 import { NewsService } from 'src/app/core/services/news.service';
 
+/**
+ * Componente que contiene las noticias de ciencia.
+ */
 @Component({
   selector: 'app-ciencia',
   templateUrl: './ciencia.component.html',
   styleUrls: [],
 })
 export class CienciaComponent implements OnInit {
+  /**
+   * Atributo que contiene las noticias.
+   */
   news: News = {
     news: [],
   };

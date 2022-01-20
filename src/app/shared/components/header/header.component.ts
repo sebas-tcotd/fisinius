@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import {
   Component,
   ElementRef,
@@ -11,6 +10,9 @@ import {
 import { Router, RouterLinkActive } from '@angular/router';
 import { NewsService } from 'src/app/core/services/news.service';
 
+/**
+ * Componente que muestra el header de la aplicación.
+ */
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'shared-header',
@@ -18,25 +20,48 @@ import { NewsService } from 'src/app/core/services/news.service';
   styleUrls: [],
 })
 export class HeaderComponent {
+  /** Atributo que está al tanto del estado de muestra del sidebar (solo en móviles). */
   @Input() isSidebarOpen: boolean = false;
+
+  /** Atributo que detecta si el panel de accesibilidad está activo. */
+  @Input() isModalActive: boolean = false;
+
+  /** Atributo que emite una señal de apertura. */
   @Output() openSignEmitter: EventEmitter<boolean> = new EventEmitter();
+
+  /** Atributo que emite el estado del panel de accesibilidad. */
   @Output() modalStatusEmitter: EventEmitter<boolean> = new EventEmitter();
+
+  /** Atributo que emite la palabra de búsqueda de una noticia. */
   @Output() searchWordEmitter: EventEmitter<string> = new EventEmitter();
+
+  /** Arreglo que contiene todos los elementos que tengan como atributo 'routerLinkActive'. */
   @ViewChildren(RouterLinkActive, { read: ElementRef })
   elementsWithRouterLinkActive!: QueryList<ElementRef>;
+
+  /** Arreglo que contendrá los elementos HTML de las secciones que no estén activamente seleccionadas. */
   sectionsElements: any[] = [];
+
+  /** Atributo que detecta si una sección está activa. */
   isSomeSectionActive: boolean = false;
+
+  /** Atributo que detecta si el panel de búsqueda está abierto. */
   isSearchOpen: boolean = false;
-  @Input() isModalActive: boolean = false;
 
   constructor(private router: Router, private news: NewsService) {}
 
+  /**
+   * Alterna el estado del sidebar y manda la señal hacia el componente padre.
+   */
   toggleSidebar(): void {
     this.isSidebarOpen = true;
     this.openSignEmitter.emit(this.isSidebarOpen);
   }
 
-  replaceItemsWithSearchInput(retain?: any): void {
+  /**
+   * Reemplaza aquellos ítems que no estén activamente seleccionados con el panel de búsqueda.
+   */
+  replaceItemsWithSearchInput(): void {
     // Agarra todos los elementos que contengan la directiva routerLinkActive
     // y los junta en un array
     this.sectionsElements = this.elementsWithRouterLinkActive
@@ -57,10 +82,16 @@ export class HeaderComponent {
     // A los elementos restantes se les agrega la clase 'hidden'
     this.sectionsElements.forEach((e) => e.classList.add('hidden'));
   }
+
+  /** Reemplaza el panel de búsqueda con los elementos que, en un principio, fueron reemplazados. */
   replaceSearchInputWithItems(): void {
     // Se remueve la clase 'hidden' a cada uno de los elementos
     this.sectionsElements.forEach((e) => e.classList.remove('hidden'));
   }
+
+  /**
+   * Alterna el estado del panel de búsqueda.
+   */
   toggleSearch(): void {
     this.isSearchOpen = !this.isSearchOpen;
 
@@ -71,7 +102,11 @@ export class HeaderComponent {
     }
   }
 
-  whoIsTheActive() {
+  /**
+   * Determina cuál de los elementos que están como secciones está activamente seleccionado.
+   * @returns El índice de la sección que está activamente seleccionada.
+   */
+  whoIsTheActive(): any {
     this.sectionsElements = this.elementsWithRouterLinkActive
       .toArray()
       .map((e) => e.nativeElement);
@@ -82,6 +117,11 @@ export class HeaderComponent {
 
     return activeIndex;
   }
+
+  /**
+   * Método que maneja el estado cuando se selecciona algún elemento del header que tenga 'routerLinkActive'.
+   * @param event Los datos que se recibe cuando el evento es activado.
+   */
   onRouterLinkActive(event: boolean): void {
     this.isSomeSectionActive = event;
 
@@ -93,18 +133,30 @@ export class HeaderComponent {
     }
   }
 
-  onSearchInput(event: string) {
+  /**
+   * Método que maneja el estado cuando se solicita una búsqueda de una noticia en base a una palabra clave.
+   * @param event Los datos del evento
+   */
+  onSearchInput(event: string): void {
     if (event) {
       this.router.navigateByUrl('/search');
     }
     this.news.searchNews(event).subscribe();
   }
 
-  toggleModal() {
+  /**
+   * Alterna el estado del panel de accesibilidad.
+   */
+  toggleModal(): void {
     this.isModalActive = !this.isModalActive;
     this.modalStatusEmitter.emit(this.isModalActive);
   }
-  receiveModalStatus(event: boolean) {
+
+  /**
+   * Recibe el estado del panel de accesibilidad.
+   * @param event El estado del panel.
+   */
+  receiveModalStatus(event: boolean): void {
     this.isModalActive = event;
     this.modalStatusEmitter.emit(this.isModalActive);
   }
